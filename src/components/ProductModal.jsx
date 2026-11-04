@@ -38,7 +38,7 @@ export default function ProductModal({ product, onClose }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-[#44003B] text-[#FAF6EF] hover:bg-[#30232E] hover:text-[#C9A24A] transition-all shadow-md"
+          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-[#47153F] text-[#FAF6EF] hover:bg-[#30232E] hover:text-[#C9A24A] transition-all shadow-md"
           aria-label="Close product preview"
         >
           <X className="w-5 h-5" />
@@ -65,7 +65,7 @@ export default function ProductModal({ product, onClose }) {
                 onClick={() => setActiveImage('main')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   activeImage === 'main'
-                    ? 'bg-[#C9A24A] text-[#44003B] font-semibold shadow'
+                    ? 'bg-[#C9A24A] text-[#47153F] font-semibold shadow'
                     : 'bg-white/10 text-white/70 hover:bg-white/20'
                 }`}
               >
@@ -75,7 +75,7 @@ export default function ProductModal({ product, onClose }) {
                 onClick={() => setActiveImage('detail')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   activeImage === 'detail'
-                    ? 'bg-[#C9A24A] text-[#44003B] font-semibold shadow'
+                    ? 'bg-[#C9A24A] text-[#47153F] font-semibold shadow'
                     : 'bg-white/10 text-white/70 hover:bg-white/20'
                 }`}
               >
@@ -94,21 +94,21 @@ export default function ProductModal({ product, onClose }) {
           <div className="space-y-4">
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-[#44003B] text-[#E8D8B7] border border-[#C9A24A]/40">
+              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-[#47153F] text-[#E8D8B7] border border-[#C9A24A]/40">
                 {product.category}
               </span>
-              <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#E8D8B7]/40 text-[#44003B] border border-[#C9A24A]/30">
+              <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#E8D8B7]/40 text-[#47153F] border border-[#C9A24A]/30">
                 {product.badge}
               </span>
               {product.tag && (
-                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#C9A24A] text-[#44003B] font-bold">
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#C9A24A] text-[#47153F] font-bold">
                   {product.tag}
                 </span>
               )}
             </div>
 
             {/* Title */}
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#44003B] leading-snug">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#47153F] leading-snug">
               {product.title}
             </h2>
 
@@ -136,7 +136,7 @@ export default function ProductModal({ product, onClose }) {
 
             {/* Transparent Note regarding prices & metal weight */}
             <div className="p-3.5 rounded-xl bg-white border border-[#C9A24A]/30 text-xs text-[#30232E]/80 space-y-1 shadow-xs">
-              <div className="flex items-center gap-1.5 font-semibold text-[#44003B]">
+              <div className="flex items-center gap-1.5 font-semibold text-[#47153F]">
                 <ShieldCheck className="w-4 h-4 text-[#C9A24A]" />
                 <span>Transparent Showroom Pricing</span>
               </div>
@@ -161,7 +161,7 @@ export default function ProductModal({ product, onClose }) {
             <div className="flex items-center gap-3">
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#44003B] hover:bg-[#30232E] text-[#FAF6EF] text-xs font-semibold tracking-wider transition-all shadow-xs"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#47153F] hover:bg-[#30232E] text-[#FAF6EF] text-xs font-semibold tracking-wider transition-all shadow-xs"
               >
                 <Phone className="w-4 h-4 text-[#C9A24A]" />
                 <span>Call Showroom</span>

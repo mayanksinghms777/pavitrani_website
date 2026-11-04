@@ -39,11 +39,10 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
   return (
     <div className="space-y-12">
       
-      {/* 1. Header Banner (Official Logo Purple #44003B with Radiant Gradient to White) */}
-      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-28 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        {/* Soft Ambient Radial Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* 1. Header Banner (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
+      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        {/* Subtle Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
         
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
@@ -51,7 +50,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
             <span>Showroom Gallery & Catalogue</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white">
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#FAF6EF]">
             Jewellery Collections
           </h1>
 
@@ -107,7 +106,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${
                     isSelected
-                      ? 'bg-[#44003B] text-[#FAF6EF] shadow-xs border border-[#C9A24A]/40'
+                      ? 'bg-[#47153F] text-[#FAF6EF] shadow-xs border border-[#C9A24A]/40'
                       : 'bg-[#FAF6EF] text-[#30232E] hover:bg-[#E8D8B7]/40 border border-gray-200'
                   }`}
                 >
@@ -127,7 +126,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
             <div className="w-12 h-12 bg-[#FAF6EF] text-[#C9A24A] rounded-full flex items-center justify-center mx-auto border border-[#C9A24A]/30">
               <Search className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#44003B]">No Matching Designs Found</h3>
+            <h3 className="font-serif text-xl font-bold text-[#47153F]">No Matching Designs Found</h3>
             <p className="text-xs text-gray-500 font-sans">
               Try adjusting your search terms or select "All Collections" to explore our full inventory.
             </p>
@@ -136,7 +135,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
                 setSearchQuery('');
                 setActiveFilter(null);
               }}
-              className="px-4 py-2 bg-[#44003B] text-[#FAF6EF] rounded-xl text-xs font-semibold hover:bg-[#30232E] transition-colors"
+              className="px-4 py-2 bg-[#47153F] text-[#FAF6EF] rounded-xl text-xs font-semibold hover:bg-[#30232E] transition-colors"
             >
               Reset Filters
             </button>
@@ -166,19 +165,19 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
                     />
 
                     {/* Badge */}
-                    <div className="absolute top-3 left-3 bg-[#44003B]/90 text-[#E8D8B7] text-[10px] font-semibold px-2.5 py-1 rounded-full border border-[#C9A24A]/40 shadow-xs">
+                    <div className="absolute top-3 left-3 bg-[#47153F]/90 text-[#E8D8B7] text-[10px] font-semibold px-2.5 py-1 rounded-full border border-[#C9A24A]/40 shadow-xs">
                       {product.badge}
                     </div>
 
                     {product.tag && (
-                      <div className="absolute top-3 right-3 bg-[#C9A24A] text-[#44003B] text-[10px] font-bold px-2.5 py-0.5 rounded shadow-xs">
+                      <div className="absolute top-3 right-3 bg-[#C9A24A] text-[#47153F] text-[10px] font-bold px-2.5 py-0.5 rounded shadow-xs">
                         {product.tag}
                       </div>
                     )}
 
                     {/* Quick View Button on Hover */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                      <span className="px-4 py-2 rounded-full bg-[#FAF6EF] text-[#44003B] text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                      <span className="px-4 py-2 rounded-full bg-[#FAF6EF] text-[#47153F] text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform">
                         <Eye className="w-3.5 h-3.5 text-[#C9A24A]" />
                         <span>Quick View & Details</span>
                       </span>
@@ -200,7 +199,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
 
                       <h3 
                         onClick={() => onSelectProduct(product)}
-                        className="font-serif text-lg font-bold text-[#44003B] group-hover:text-[#C9A24A] transition-colors cursor-pointer line-clamp-1"
+                        className="font-serif text-lg font-bold text-[#47153F] group-hover:text-[#C9A24A] transition-colors cursor-pointer line-clamp-1"
                       >
                         {product.title}
                       </h3>
@@ -230,7 +229,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
                     <div className="pt-3 border-t border-gray-100 flex items-center gap-2">
                       <button
                         onClick={() => onSelectProduct(product)}
-                        className="flex-1 py-2.5 px-3 rounded-xl bg-[#FAF6EF] hover:bg-[#44003B] hover:text-[#FAF6EF] text-[#44003B] border border-[#C9A24A]/30 text-xs font-semibold tracking-wide transition-all text-center"
+                        className="flex-1 py-2.5 px-3 rounded-xl bg-[#FAF6EF] hover:bg-[#47153F] hover:text-[#FAF6EF] text-[#47153F] border border-[#C9A24A]/30 text-xs font-semibold tracking-wide transition-all text-center"
                       >
                         Details
                       </button>
@@ -260,7 +259,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
           <div className="flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-[#C9A24A] shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-semibold text-sm text-[#44003B]">
+              <h4 className="font-semibold text-sm text-[#47153F]">
                 Authentic Photography & Transparent Information
               </h4>
               <p className="mt-0.5 text-[#30232E]/70 max-w-2xl font-sans leading-relaxed">
@@ -273,7 +272,7 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
             href={BUSINESS_INFO.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 px-5 py-2.5 rounded-xl bg-[#44003B] hover:bg-[#30232E] text-[#FAF6EF] text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5 shadow"
+            className="shrink-0 px-5 py-2.5 rounded-xl bg-[#47153F] hover:bg-[#30232E] text-[#FAF6EF] text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5 shadow"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400" />
             <span>Ask About Any Custom Piece</span>

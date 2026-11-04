@@ -99,16 +99,16 @@ export default function ContactForm({ defaultInterest = "" }) {
     <div className="bg-white rounded-2xl shadow-luxury border border-[#C9A24A]/25 p-6 sm:p-8">
       {submitted ? (
         <div className="py-8 text-center space-y-5 animate-in fade-in duration-300">
-          <div className="w-16 h-16 bg-[#FAF6EF] text-[#44003B] rounded-full flex items-center justify-center mx-auto border border-[#C9A24A]/30">
+          <div className="w-16 h-16 bg-[#FAF6EF] text-[#47153F] rounded-full flex items-center justify-center mx-auto border border-[#C9A24A]/30">
             <CheckCircle2 className="w-10 h-10 text-[#C9A24A]" />
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-serif text-2xl font-bold text-[#44003B]">
+            <h3 className="font-serif text-2xl font-bold text-[#47153F]">
               Enquiry Received with Reverence!
             </h3>
             <p className="text-sm text-[#30232E]/80 max-w-md mx-auto">
-              Thank you, <strong className="text-[#44003B]">{formData.name}</strong>. Our jewellery advisors at Pavitrani Jewellers Varanasi will get in touch with you shortly on <strong className="text-[#44003B]">{formData.phone}</strong>.
+              Thank you, <strong className="text-[#47153F]">{formData.name}</strong>. Our jewellery advisors at Pavitrani Jewellers Varanasi will get in touch with you shortly on <strong className="text-[#47153F]">{formData.phone}</strong>.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function ContactForm({ defaultInterest = "" }) {
                   botField: ''
                 });
               }}
-              className="text-xs text-[#30232E]/70 hover:text-[#44003B] underline"
+              className="text-xs text-[#30232E]/70 hover:text-[#47153F] underline"
             >
               Send Another Enquiry
             </button>
@@ -280,7 +280,7 @@ export default function ContactForm({ defaultInterest = "" }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#44003B] hover:bg-[#30232E] text-[#FAF6EF] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all disabled:opacity-60"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#47153F] hover:bg-[#30232E] text-[#FAF6EF] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all disabled:opacity-60"
             >
               <Send className="w-4 h-4 text-[#C9A24A]" />
               <span>{isSubmitting ? 'Submitting...' : 'Submit Enquiry'}</span>
@@ -298,7 +298,7 @@ export default function ContactForm({ defaultInterest = "" }) {
 
           <p className="text-[11px] text-gray-500 text-center font-sans">
             🔒 Your contact details are securely protected in accordance with our{' '}
-            <span className="text-[#44003B] font-semibold underline cursor-pointer">Privacy Policy</span>. We never spam.
+            <span className="text-[#47153F] font-semibold underline cursor-pointer">Privacy Policy</span>. We never spam.
           </p>
         </form>
       )}

@@ -18,11 +18,10 @@ export default function ContactPage() {
   return (
     <div className="space-y-16">
       
-      {/* 1. Header Banner (Official Logo Purple #44003B with Radiant Gradient to White) */}
-      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-32 sm:pb-36 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        {/* Soft Ambient Radial Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* 1. Header Banner (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
+      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        {/* Subtle Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
@@ -30,7 +29,7 @@ export default function ContactPage() {
             <span>Connect with Pavitrani Jewellers</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#FAF6EF] leading-tight">
             Contact & Showroom Visit
           </h1>
 
@@ -52,7 +51,7 @@ export default function ContactPage() {
                 <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
                   Showroom Headquarters
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-[#44003B] mt-1">
+                <h3 className="font-serif text-2xl font-bold text-[#47153F] mt-1">
                   Pavitrani Jewellers
                 </h3>
                 <p className="text-xs text-[#30232E]/70 font-sans">
@@ -65,7 +64,7 @@ export default function ContactPage() {
 
               {/* Physical Address */}
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
+                <div className="w-10 h-10 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -81,7 +80,7 @@ export default function ContactPage() {
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-[#44003B] hover:text-[#C9A24A] mt-2 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-[#47153F] hover:text-[#C9A24A] mt-2 transition-colors"
                   >
                     <Navigation className="w-3.5 h-3.5 text-[#C9A24A]" />
                     <span>Navigate via Google Maps</span>
@@ -91,7 +90,7 @@ export default function ContactPage() {
 
               {/* Phone Numbers */}
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
+                <div className="w-10 h-10 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -100,7 +99,7 @@ export default function ContactPage() {
                   </h4>
                   <div className="mt-1 space-y-1 text-sm">
                     <p>
-                      Primary: <a href={`tel:+91${BUSINESS_INFO.phone}`} className="font-semibold text-[#44003B] hover:text-[#C9A24A] transition-colors">{BUSINESS_INFO.phoneDisplay}</a>
+                      Primary: <a href={`tel:+91${BUSINESS_INFO.phone}`} className="font-semibold text-[#47153F] hover:text-[#C9A24A] transition-colors">{BUSINESS_INFO.phoneDisplay}</a>
                     </p>
                     <p>
                       Secondary: <a href={`tel:+91${BUSINESS_INFO.phoneSecondary}`} className="text-[#30232E]/80 hover:text-[#C9A24A] transition-colors">{BUSINESS_INFO.phoneSecondaryDisplay}</a>
@@ -135,7 +134,7 @@ export default function ContactPage() {
 
               {/* Email */}
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
+                <div className="w-10 h-10 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -144,7 +143,7 @@ export default function ContactPage() {
                   </h4>
                   <a 
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="text-sm text-[#30232E]/80 hover:text-[#44003B] break-all mt-1 block transition-colors"
+                    className="text-sm text-[#30232E]/80 hover:text-[#47153F] break-all mt-1 block transition-colors"
                   >
                     {BUSINESS_INFO.email}
                   </a>
@@ -153,7 +152,7 @@ export default function ContactPage() {
 
               {/* Business Hours */}
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
+                <div className="w-10 h-10 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
@@ -186,7 +185,7 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Call Action Card */}
-            <div className="p-6 rounded-3xl bg-[#44003B] text-white border border-[#C9A24A]/35 space-y-3 shadow-md">
+            <div className="p-6 rounded-3xl bg-[#47153F] text-white border border-[#C9A24A]/35 space-y-3 shadow-md">
               <div className="flex items-center gap-2 text-[#E8D8B7] text-xs font-semibold uppercase tracking-wider">
                 <Sparkles className="w-4 h-4 text-[#C9A24A]" />
                 <span>Visiting Today?</span>
@@ -196,7 +195,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] rounded-xl font-semibold text-xs tracking-wider uppercase transition-all shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#FAF6EF] text-[#47153F] hover:bg-[#E8D8B7] rounded-xl font-semibold text-xs tracking-wider uppercase transition-all shadow-sm"
               >
                 <Phone className="w-4 h-4 text-[#C9A24A]" />
                 <span>Call Showroom Now (+91 {BUSINESS_INFO.phone})</span>
@@ -210,7 +209,7 @@ export default function ContactPage() {
               <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
                 Send a Message
               </span>
-              <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+              <h2 className="font-serif text-3xl font-bold text-[#47153F]">
                 Online Jewellery Enquiry
               </h2>
               <p className="text-xs text-[#30232E]/70 font-sans">
@@ -230,7 +229,7 @@ export default function ContactPage() {
           <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
             Location Map
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+          <h2 className="font-serif text-3xl font-bold text-[#47153F]">
             Interactive Showroom Map
           </h2>
           <p className="text-xs text-[#30232E]/70 font-sans">
@@ -262,7 +261,7 @@ export default function ContactPage() {
               href={BUSINESS_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-full bg-[#44003B] text-[#FAF6EF] hover:bg-[#30232E] text-xs font-semibold transition-all flex items-center gap-2 shadow-xs"
+              className="px-5 py-2.5 rounded-full bg-[#47153F] text-[#FAF6EF] hover:bg-[#30232E] text-xs font-semibold transition-all flex items-center gap-2 shadow-xs"
             >
               <Navigation className="w-3.5 h-3.5 text-[#C9A24A]" />
               <span>Open in Google Maps Navigation</span>

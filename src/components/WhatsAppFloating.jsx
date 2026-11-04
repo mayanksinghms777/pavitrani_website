@@ -13,7 +13,7 @@ export default function WhatsAppFloating() {
     <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
       {/* Interactive Tooltip Card */}
       {!tooltipDismissed && (
-        <div className="hidden sm:flex items-center gap-2 bg-[#44003B] text-[#FAF6EF] text-xs px-3.5 py-2 rounded-full shadow-2xl border border-[#C9A24A]/40 animate-bounce duration-1000">
+        <div className="hidden sm:flex items-center gap-2 bg-[#47153F] text-[#FAF6EF] text-xs px-3.5 py-2 rounded-full shadow-2xl border border-[#C9A24A]/40 animate-bounce duration-1000">
           <span className="text-[#E8D8B7] font-medium">Have questions?</span>
           <span>Chat with our Showroom</span>
           <button 
@@ -40,7 +40,7 @@ export default function WhatsAppFloating() {
         <MessageCircle className="w-7 h-7 relative z-10" />
 
         {/* Floating Badge */}
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#C9A24A] text-[#44003B] text-[10px] font-bold rounded-full flex items-center justify-center border border-white">
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#C9A24A] text-[#47153F] text-[10px] font-bold rounded-full flex items-center justify-center border border-white">
           1
         </span>
       </a>

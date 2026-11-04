@@ -17,11 +17,10 @@ export default function AboutPage({ setActivePage }) {
   return (
     <div className="space-y-16 sm:space-y-24">
       
-      {/* 1. Header Hero (Official Logo Purple #44003B with Radiant Gradient to White) */}
-      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-32 sm:pb-36 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Soft Ambient Radial Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* 1. Header Hero (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
+      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 relative overflow-hidden text-center">
+        {/* Subtle Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
         
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
           
@@ -60,7 +59,7 @@ export default function AboutPage({ setActivePage }) {
               <span className="text-xs font-semibold uppercase tracking-widest text-[#C9A24A]">
                 Our Origins & Heritage
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
                 A Legacy of Metallurgical Craftsmanship in Kashi
               </h2>
             </div>
@@ -74,7 +73,7 @@ export default function AboutPage({ setActivePage }) {
             </p>
 
             <div className="space-y-3 pt-2">
-              <h4 className="font-serif text-xl font-bold text-[#44003B]">
+              <h4 className="font-serif text-xl font-bold text-[#47153F]">
                 The Meaning of "Pavitrani"
               </h4>
               <p className="text-sm text-[#30232E]/80 leading-relaxed font-sans">
@@ -83,15 +82,15 @@ export default function AboutPage({ setActivePage }) {
             </div>
 
             <div className="pt-2 flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#44003B]">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#47153F]">
                 <CheckCircle2 className="w-4 h-4 text-[#C9A24A]" />
                 <span>Zero Compromise on Hallmarked Purity</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#44003B]">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#47153F]">
                 <CheckCircle2 className="w-4 h-4 text-[#C9A24A]" />
                 <span>Ethical & Transparent Billing</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#44003B]">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#47153F]">
                 <CheckCircle2 className="w-4 h-4 text-[#C9A24A]" />
                 <span>Master Silversmiths of Varanasi</span>
               </div>
@@ -126,7 +125,7 @@ export default function AboutPage({ setActivePage }) {
           <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
             Our Moral Foundation
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
             Values That Guide Every Creation
           </h2>
           <div className="w-16 h-0.5 bg-[#C9A24A] mx-auto rounded-full" />
@@ -134,40 +133,40 @@ export default function AboutPage({ setActivePage }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white rounded-2xl p-6 shadow-luxury border border-[#C9A24A]/20 space-y-3 text-left">
-            <div className="w-12 h-12 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
+            <div className="w-12 h-12 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#44003B]">Uncompromising Purity</h3>
+            <h3 className="font-serif text-xl font-bold text-[#47153F]">Uncompromising Purity</h3>
             <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
               Every piece of 925 sterling silver, solid gold, and gemstone is vetted with rigorous metallurgical testing. What you see is what you receive — guaranteed.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl p-6 shadow-luxury border border-[#C9A24A]/20 space-y-3 text-left">
-            <div className="w-12 h-12 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
+            <div className="w-12 h-12 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
               <Scale className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#44003B]">Total Transparency</h3>
+            <h3 className="font-serif text-xl font-bold text-[#47153F]">Total Transparency</h3>
             <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
               No hidden making charges or ambiguous pricing formulas. We weigh every ornament on high-precision certified scales right before your eyes.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl p-6 shadow-luxury border border-[#C9A24A]/20 space-y-3 text-left">
-            <div className="w-12 h-12 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
+            <div className="w-12 h-12 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
               <Sparkles className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#44003B]">Artisanal Silversmithing</h3>
+            <h3 className="font-serif text-xl font-bold text-[#47153F]">Artisanal Silversmithing</h3>
             <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
               From our famous chiseled silver Mayur (peacocks) to intricate filigree clover bracelets, our artisans marry Banarasi heritage with modern silhouettes.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl p-6 shadow-luxury border border-[#C9A24A]/20 space-y-3 text-left">
-            <div className="w-12 h-12 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
+            <div className="w-12 h-12 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center text-[#C9A24A]">
               <HeartHandshake className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-xl font-bold text-[#44003B]">Generational Care</h3>
+            <h3 className="font-serif text-xl font-bold text-[#47153F]">Generational Care</h3>
             <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
               We build lifelong relationships with families across Varanasi, offering post-purchase resizing, cleaning, polishing, and custom heirloom restoration.
             </p>
@@ -183,7 +182,7 @@ export default function AboutPage({ setActivePage }) {
             <span className="text-xs font-semibold uppercase tracking-widest text-[#C9A24A]">
               Real Photographs
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl font-bold text-[#47153F]">
               Step Inside Our Varanasi Showroom
             </h2>
             <p className="text-xs text-[#30232E]/70 font-sans">
@@ -209,7 +208,7 @@ export default function AboutPage({ setActivePage }) {
                   <span className="text-[11px] font-semibold text-[#C9A24A] uppercase tracking-wider">
                     {item.subtitle}
                   </span>
-                  <h3 className="font-serif text-xl font-bold text-[#44003B]">
+                  <h3 className="font-serif text-xl font-bold text-[#47153F]">
                     {item.title}
                   </h3>
                   <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
@@ -225,7 +224,7 @@ export default function AboutPage({ setActivePage }) {
 
       {/* 5. Visit Invitation Call to Action */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12">
-        <div className="bg-[#44003B] text-[#FAF6EF] p-8 sm:p-12 rounded-3xl shadow-xl border border-[#C9A24A]/40 space-y-6">
+        <div className="bg-[#47153F] text-[#FAF6EF] p-8 sm:p-12 rounded-3xl shadow-xl border border-[#C9A24A]/40 space-y-6">
           <div className="w-14 h-14 rounded-full bg-white/10 mx-auto flex items-center justify-center border border-[#C9A24A]/40 text-[#E8D8B7]">
             <Gem className="w-7 h-7 text-[#C9A24A]" />
           </div>
@@ -245,7 +244,7 @@ export default function AboutPage({ setActivePage }) {
                 window.location.hash = 'contact';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-6 py-3 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all"
+              className="px-6 py-3 rounded-full bg-[#FAF6EF] text-[#47153F] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all"
             >
               Get Showroom Directions
             </button>

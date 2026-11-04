@@ -27,33 +27,33 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
   };
 
   return (
-    <footer className="bg-[#44003B] text-[#FAF6EF] pt-16 pb-8 border-t border-[#C9A24A]/40 relative overflow-hidden">
+    <footer className="bg-[#47153F] text-[#FAF6EF] pt-16 pb-8 border-t border-[#C9A24A]/40 relative overflow-hidden">
       {/* Decorative Subtle Antique Gold Ambient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-28 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#C9A24A]/25">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 pb-12 border-b border-[#C9A24A]/25">
           
-          {/* Col 1: Brand & Identity */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
+          {/* Col 1: Brand & Identity (Takes 4 cols to prevent text overlap) */}
+          <div className="lg:col-span-4 space-y-4">
+            <div className="flex items-center gap-3 min-w-0">
               <div className="relative flex-shrink-0">
                 <img 
                   src="/logo.png" 
                   alt="Pavitrani Jewellers Official Lotus Emblem" 
-                  className="h-11 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(201,162,74,0.4)]"
+                  className="h-10 xl:h-11 w-auto object-contain brightness-0 invert opacity-90"
                 />
               </div>
-              <div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="font-serif text-xl font-bold tracking-wider text-[#FAF6EF]">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-1 leading-tight">
+                  <span className="font-serif text-lg xl:text-xl font-bold tracking-wider text-[#FAF6EF]">
                     PAVITRANI
                   </span>
-                  <span className="font-serif text-xl font-bold tracking-wider text-[#E8D8B7]">
+                  <span className="font-serif text-lg xl:text-xl font-bold tracking-wider text-[#E8D8B7]">
                     JEWELLERS
                   </span>
                 </div>
-                <p className="text-[10px] uppercase tracking-widest text-[#FAF6EF]/75 font-sans pt-0.5">
+                <p className="text-[10px] uppercase tracking-widest text-[#FAF6EF]/75 font-sans pt-0.5 truncate">
                   A unit of Mayank Metal Works
                 </p>
               </div>
@@ -84,7 +84,7 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 aria-label="Pavitrani Jewellers Instagram Profile"
                 title="Follow Pavitrani Jewellers on Instagram"
               >
-                <div className="w-full h-full bg-[#44003B] rounded-full flex items-center justify-center hover:bg-transparent transition-colors">
+                <div className="w-full h-full bg-[#47153F] rounded-full flex items-center justify-center hover:bg-transparent transition-colors">
                   <InstagramIcon className="w-4 h-4 text-white" />
                 </div>
               </a>
@@ -102,7 +102,7 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
 
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="w-9 h-9 rounded-full bg-[#C9A24A] flex items-center justify-center hover:bg-[#E8D8B7] hover:scale-110 transition-all text-[#44003B] shadow"
+                className="w-9 h-9 rounded-full bg-[#C9A24A] flex items-center justify-center hover:bg-[#E8D8B7] hover:scale-110 transition-all text-[#47153F] shadow"
                 aria-label="Call Showroom"
                 title="Call showroom directly"
               >
@@ -120,8 +120,8 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
             </div>
           </div>
 
-          {/* Col 2: Navigation Links */}
-          <div className="space-y-4">
+          {/* Col 2: Navigation Links (2 cols out of 12) */}
+          <div className="lg:col-span-2 space-y-4">
             <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
               Navigation
             </h4>
@@ -192,8 +192,8 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
             </ul>
           </div>
 
-          {/* Col 3: Collections Categories */}
-          <div className="space-y-4">
+          {/* Col 3: Collections Categories (3 cols out of 12) */}
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
               Featured Collections
             </h4>
@@ -258,8 +258,8 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
             </div>
           </div>
 
-          {/* Col 4: Showroom Address & Timings */}
-          <div className="space-y-4">
+          {/* Col 4: Showroom Address & Timings (3 cols out of 12) */}
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
               Visit Showroom
             </h4>

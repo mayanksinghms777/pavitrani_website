@@ -32,12 +32,10 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
   return (
     <div className="space-y-20 sm:space-y-28">
       
-      {/* 1. HERO SECTION (Official Logo Purple #44003B with Radiant Luxury Gradient to White) */}
-      <section className="relative min-h-[88vh] flex items-center bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF8F5] overflow-hidden pt-8 pb-24 sm:pb-32">
-        {/* Soft Ambient Radial Sheen from Top (Clean, true color without muddy shifts) */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        {/* Seamless Soft Fade to White at Bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* 1. HERO SECTION (Official Brand Royal Plum #47153F with Standard Elegant Radial Gradient) */}
+      <section className="relative min-h-[85vh] flex items-center bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] overflow-hidden py-16 lg:py-24 border-b border-[#C9A24A]/25">
+        {/* Subtle Fine Gold Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -68,7 +66,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'collections';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-7 py-3.5 rounded-full bg-white text-[#44003B] hover:bg-[#FAF8F5] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                className="px-7 py-3.5 rounded-full bg-white text-[#47153F] hover:bg-[#FAF8F5] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
               >
                 <span>Explore Collections</span>
                 <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -134,7 +132,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   <div className="absolute inset-0 bg-gradient-to-t from-[#30232E] via-transparent to-black/20" />
 
                   {/* Watermark badge on card */}
-                  <div className="absolute top-4 left-4 bg-[#44003B]/90 backdrop-blur-xs text-[#E8D8B7] text-[11px] font-medium px-3 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow">
+                  <div className="absolute top-4 left-4 bg-[#47153F]/90 backdrop-blur-xs text-[#E8D8B7] text-[11px] font-medium px-3 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow">
                     <Sparkles className="w-3 h-3 text-[#C9A24A]" />
                     <span>Signature Creation</span>
                   </div>
@@ -170,18 +168,18 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
       </section>
 
       {/* 2. VALUE PROPOSITIONS STRIP */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-16 relative z-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {BUSINESS_INFO.pillars.map((pillar, idx) => (
             <div key={idx} className="flex items-start gap-4 p-2">
-              <div className="w-12 h-12 rounded-xl bg-[#44003B]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
+              <div className="w-12 h-12 rounded-xl bg-[#47153F]/5 border border-[#C9A24A]/30 flex items-center justify-center shrink-0 text-[#C9A24A]">
                 {idx === 0 && <ShieldCheck className="w-6 h-6" />}
                 {idx === 1 && <Sparkles className="w-6 h-6" />}
                 {idx === 2 && <Scale className="w-6 h-6" />}
                 {idx === 3 && <Gem className="w-6 h-6" />}
               </div>
               <div>
-                <h4 className="font-serif text-lg font-bold text-[#44003B]">{pillar.title}</h4>
+                <h4 className="font-serif text-lg font-bold text-[#47153F]">{pillar.title}</h4>
                 <p className="text-xs text-[#30232E]/75 leading-relaxed mt-1 font-sans">{pillar.description}</p>
               </div>
             </div>
@@ -195,7 +193,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
           <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
             Curated Showroom Portfolios
           </p>
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#44003B]">
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold text-[#47153F]">
             Distinctive Jewellery Collections
           </h2>
           <div className="w-16 h-0.5 bg-[#C9A24A] mx-auto rounded-full" />
@@ -229,7 +227,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
                 Bracelets, snake chains, meander links, tennis bands and daily-wear ornaments crafted in certified 92.5% pure sterling silver.
               </p>
-              <div className="flex items-center text-xs font-semibold text-[#44003B] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
+              <div className="flex items-center text-xs font-semibold text-[#47153F] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
                 <span>View Silver Pieces</span>
                 <ChevronRight className="w-4 h-4 ml-1" />
               </div>
@@ -259,7 +257,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
                 Chiseled silver Mayur (peacocks), puja thalis, kalash, dinnerware sets, and temple offerings rooted in Varanasi's holy traditions.
               </p>
-              <div className="flex items-center text-xs font-semibold text-[#44003B] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
+              <div className="flex items-center text-xs font-semibold text-[#47153F] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
                 <span>View Silver Artefacts</span>
                 <ChevronRight className="w-4 h-4 ml-1" />
               </div>
@@ -289,7 +287,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
                 Bridal trousseau necklaces, choker sets, traditional jhumkis, and lightweight contemporary gold jewellery hallmarked for purity.
               </p>
-              <div className="flex items-center text-xs font-semibold text-[#44003B] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
+              <div className="flex items-center text-xs font-semibold text-[#47153F] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
                 <span>View Gold Jewellery</span>
                 <ChevronRight className="w-4 h-4 ml-1" />
               </div>
@@ -319,7 +317,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs text-[#30232E]/75 leading-relaxed font-sans">
                 Brilliant diamond solitaires, halo tennis bracelets, and modern rings offering unmatched fire, clarity, and ethical provenance.
               </p>
-              <div className="flex items-center text-xs font-semibold text-[#44003B] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
+              <div className="flex items-center text-xs font-semibold text-[#47153F] group-hover:text-[#C9A24A] group-hover:translate-x-1 transition-all">
                 <span>View Diamond Pieces</span>
                 <ChevronRight className="w-4 h-4 ml-1" />
               </div>
@@ -338,7 +336,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
                 Showroom Favourites
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
                 Featured Jewellery Pieces
               </h2>
             </div>
@@ -349,7 +347,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                 window.location.hash = 'collections';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="text-xs font-semibold tracking-wider text-[#44003B] hover:text-[#C9A24A] flex items-center gap-1.5 uppercase transition-colors"
+              className="text-xs font-semibold tracking-wider text-[#47153F] hover:text-[#C9A24A] flex items-center gap-1.5 uppercase transition-colors"
             >
               <span>Explore All 12 Showroom Designs</span>
               <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -372,12 +370,12 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   />
 
                   {/* Badge */}
-                  <div className="absolute top-3 left-3 bg-[#44003B]/90 text-[#E8D8B7] text-[10px] font-semibold px-2.5 py-1 rounded-full border border-[#C9A24A]/40">
+                  <div className="absolute top-3 left-3 bg-[#47153F]/90 text-[#E8D8B7] text-[10px] font-semibold px-2.5 py-1 rounded-full border border-[#C9A24A]/40">
                     {product.badge}
                   </div>
 
                   {product.tag && (
-                    <div className="absolute top-3 right-3 bg-[#C9A24A] text-[#44003B] text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
+                    <div className="absolute top-3 right-3 bg-[#C9A24A] text-[#47153F] text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
                       {product.tag}
                     </div>
                   )}
@@ -389,7 +387,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                     <span className="text-[11px] font-medium text-[#C9A24A] uppercase tracking-wider">
                       {product.category}
                     </span>
-                    <h3 className="font-serif text-lg font-bold text-[#44003B] group-hover:text-[#C9A24A] transition-colors line-clamp-1">
+                    <h3 className="font-serif text-lg font-bold text-[#47153F] group-hover:text-[#C9A24A] transition-colors line-clamp-1">
                       {product.title}
                     </h3>
                     <p className="text-xs text-[#30232E]/75 line-clamp-2 leading-relaxed font-sans">
@@ -400,7 +398,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   <div className="pt-2 border-t border-gray-100 flex items-center gap-2">
                     <button
                       onClick={() => onSelectProduct(product)}
-                      className="flex-1 py-2 px-3 rounded-xl bg-[#FAF6EF] hover:bg-[#44003B] hover:text-[#FAF6EF] text-[#44003B] border border-[#C9A24A]/30 text-xs font-semibold tracking-wide transition-all text-center"
+                      className="flex-1 py-2 px-3 rounded-xl bg-[#FAF6EF] hover:bg-[#47153F] hover:text-[#FAF6EF] text-[#47153F] border border-[#C9A24A]/30 text-xs font-semibold tracking-wide transition-all text-center"
                     >
                       Quick View
                     </button>
@@ -428,7 +426,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
 
       {/* 5. ABOUT PAVITRANI PREVIEW (Royal Plum Brand Feature) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#44003B] text-[#FAF6EF] rounded-3xl overflow-hidden shadow-xl border border-[#C9A24A]/35 grid grid-cols-1 lg:grid-cols-12">
+        <div className="bg-[#47153F] text-[#FAF6EF] rounded-3xl overflow-hidden shadow-xl border border-[#C9A24A]/35 grid grid-cols-1 lg:grid-cols-12">
           
           <div className="lg:col-span-6 p-8 sm:p-12 lg:p-14 flex flex-col justify-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium w-fit">
@@ -467,7 +465,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'about';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FAF6EF] text-[#47153F] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all"
               >
                 <span>Read Our Full Story & Values</span>
                 <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -481,7 +479,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               alt="Pavitrani Jewellers Luxury Showroom Salon Varanasi"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#44003B] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#44003B] lg:via-transparent lg:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#47153F] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#47153F] lg:via-transparent lg:to-transparent" />
             <div className="absolute bottom-6 right-6 left-6 lg:left-auto bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/10 text-xs text-white max-w-sm">
               <p className="text-[#E8D8B7] font-semibold uppercase tracking-wider">Showroom Experience</p>
               <p className="mt-1 text-white/80">Plush royal purple velvet seating designed for leisurely family consultations on BLW Road.</p>
@@ -497,7 +495,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
           <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
             Store Experience
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
             Visit Our Grand Varanasi Showroom
           </h2>
           <div className="w-16 h-0.5 bg-[#C9A24A] mx-auto rounded-full" />
@@ -557,7 +555,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               window.location.hash = 'showroom';
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#44003B] hover:text-[#C9A24A] transition-colors"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#47153F] hover:text-[#C9A24A] transition-colors"
           >
             <span>Explore Virtual Showroom Tour & Directions</span>
             <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -573,7 +571,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
             <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
               Customer Voices
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
               Words of Trust from Varanasi Patrons
             </h2>
             <div className="w-16 h-0.5 bg-[#C9A24A] mx-auto rounded-full" />
@@ -602,9 +600,9 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                 </div>
 
                 <div className="pt-3 border-t border-gray-100 space-y-1">
-                  <p className="font-semibold text-xs text-[#44003B]">{t.name}</p>
+                  <p className="font-semibold text-xs text-[#47153F]">{t.name}</p>
                   <p className="text-[11px] text-gray-500">{t.location}</p>
-                  <span className="inline-block mt-1 text-[10px] text-[#44003B] bg-[#FAF6EF] px-2 py-0.5 rounded border border-[#C9A24A]/30">
+                  <span className="inline-block mt-1 text-[10px] text-[#47153F] bg-[#FAF6EF] px-2 py-0.5 rounded border border-[#C9A24A]/30">
                     {t.productMentioned}
                   </span>
                 </div>
@@ -625,7 +623,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <p className="text-xs font-semibold tracking-widest text-[#C9A24A] uppercase">
                 Visit or Reach Out
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#44003B]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#47153F]">
                 We Welcome You to Pavitrani
               </h2>
               <p className="text-sm text-[#30232E]/80 font-sans">
@@ -637,13 +635,13 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-sm text-[#44003B]">Showroom Address</h4>
+                  <h4 className="font-semibold text-sm text-[#47153F]">Showroom Address</h4>
                   <p className="mt-0.5 text-gray-600">81/1 Shivdaspur B.L.W Road, Near Kabir Ashram, Varanasi, U.P. 221004</p>
                   <a
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-1 text-[#44003B] font-semibold hover:underline"
+                    className="inline-block mt-1 text-[#47153F] font-semibold hover:underline"
                   >
                     Open in Google Maps Navigation ›
                   </a>
@@ -653,12 +651,12 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-sm text-[#44003B]">Contact Numbers</h4>
+                  <h4 className="font-semibold text-sm text-[#47153F]">Contact Numbers</h4>
                   <p className="mt-0.5 text-gray-600">
-                    Primary: <a href={`tel:+91${BUSINESS_INFO.phone}`} className="font-semibold text-[#44003B]">{BUSINESS_INFO.phoneDisplay}</a>
+                    Primary: <a href={`tel:+91${BUSINESS_INFO.phone}`} className="font-semibold text-[#47153F]">{BUSINESS_INFO.phoneDisplay}</a>
                   </p>
                   <p className="text-gray-600">
-                    Secondary: <a href={`tel:+91${BUSINESS_INFO.phoneSecondary}`} className="text-[#44003B]">{BUSINESS_INFO.phoneSecondaryDisplay}</a>
+                    Secondary: <a href={`tel:+91${BUSINESS_INFO.phoneSecondary}`} className="text-[#47153F]">{BUSINESS_INFO.phoneSecondaryDisplay}</a>
                   </p>
                 </div>
               </div>
@@ -666,7 +664,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-sm text-[#44003B]">Showroom Timings</h4>
+                  <h4 className="font-semibold text-sm text-[#47153F]">Showroom Timings</h4>
                   <p className="mt-0.5 text-gray-600">Monday to Sunday: 10:30 AM to 8:30 PM</p>
                   <p className="text-emerald-700 font-semibold">Open All 7 Days</p>
                 </div>
@@ -674,7 +672,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
             </div>
 
             {/* Direct WhatsApp Callout */}
-            <div className="p-5 rounded-2xl bg-[#44003B] text-white flex items-center justify-between gap-4 border border-[#C9A24A]/40 shadow-md">
+            <div className="p-5 rounded-2xl bg-[#47153F] text-white flex items-center justify-between gap-4 border border-[#C9A24A]/40 shadow-md">
               <div>
                 <p className="text-xs text-[#E8D8B7] uppercase font-semibold">Instant Showroom Assistance</p>
                 <p className="text-sm font-serif mt-0.5">Chat with our jewellery advisor on WhatsApp</p>

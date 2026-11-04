@@ -31,8 +31,8 @@ export default function Navbar({ activePage, setActivePage }) {
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300">
-      {/* 1. Top Luxury Announcement Bar (Royal Plum) */}
-      <div className="bg-[#44003B] text-[#FAF6EF] text-xs py-1.5 px-4 border-b border-[#C9A24A]/25 hidden sm:block">
+      {/* 1. Top Luxury Announcement Bar (Royal Plum #47153F) */}
+      <div className="bg-[#47153F] text-[#FAF6EF] text-xs py-1.5 px-4 border-b border-[#C9A24A]/25 hidden sm:block">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4 text-xs font-light tracking-wider text-[#FAF6EF]/90">
             <span className="flex items-center gap-1.5">
@@ -95,7 +95,7 @@ export default function Navbar({ activePage, setActivePage }) {
             {/* Brand Lockup: PAVITRANI JEWELLERS on ONE horizontal line on desktop */}
             <div className="flex flex-col min-w-0">
               <div className="flex items-baseline gap-1.5 sm:gap-2 leading-none">
-                <span className="font-serif text-lg sm:text-xl md:text-2xl lg:text-[23px] font-bold tracking-[0.14em] text-[#44003B] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
+                <span className="font-serif text-base sm:text-lg md:text-xl lg:text-[21px] xl:text-[23px] font-bold tracking-[0.12em] text-[#47153F] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
                   PAVITRANI JEWELLERS
                 </span>
               </div>
@@ -106,29 +106,29 @@ export default function Navbar({ activePage, setActivePage }) {
               </span>
               
               {/* Secondary text */}
-              <span className="text-[8px] sm:text-[9px] text-[#30232E]/70 tracking-wider uppercase font-sans hidden md:block leading-tight mt-0.5 font-medium">
+              <span className="text-[8px] sm:text-[9px] text-[#30232E]/70 tracking-wider uppercase font-sans hidden md:block leading-tight mt-0.5 font-medium whitespace-nowrap">
                 A unit of Mayank Metal Works
               </span>
             </div>
           </button>
 
-          {/* Desktop Navigation Links (Center) */}
-          <div className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Navigation Links (Center - Guaranteed strictly on ONE horizontal line) */}
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 shrink-0">
             {navLinks.map((link) => {
               const isActive = activePage === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`px-3.5 py-1.5 text-sm font-medium tracking-wide transition-all rounded-md relative ${
+                  className={`whitespace-nowrap px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium tracking-wide transition-all rounded-md relative ${
                     isActive
-                      ? 'text-[#44003B] font-bold'
-                      : 'text-[#30232E]/80 hover:text-[#44003B] hover:bg-[#E8D8B7]/30'
+                      ? 'text-[#47153F] font-bold'
+                      : 'text-[#30232E]/80 hover:text-[#47153F] hover:bg-[#E8D8B7]/30'
                   }`}
                 >
-                  {link.label}
+                  <span className="whitespace-nowrap">{link.label}</span>
                   {isActive && (
-                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#C9A24A]"></span>
+                    <span className="absolute bottom-0 left-2 right-2 xl:left-3 xl:right-3 h-[2px] bg-[#C9A24A]"></span>
                   )}
                 </button>
               );
@@ -136,23 +136,23 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
 
           {/* Action Buttons on Right (Desktop) */}
-          <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0">
+          <div className="hidden sm:flex items-center gap-2 xl:gap-2.5 shrink-0">
             <a
               href={BUSINESS_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs"
+              className="hidden md:inline-flex items-center gap-1.5 px-3 xl:px-3.5 py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs whitespace-nowrap"
               title="Chat with jewellery advisor on WhatsApp"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" />
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white shrink-0" />
               <span>Enquire Now</span>
             </a>
 
             <button
               onClick={() => handleNavClick('contact')}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#44003B] text-[#FAF6EF] hover:bg-[#30232E] border border-[#C9A24A]/40 transition-all text-xs font-semibold tracking-wider uppercase shadow-sm hover:shadow"
+              className="inline-flex items-center gap-1.5 px-3.5 xl:px-4 py-2 rounded-full bg-[#47153F] text-white hover:bg-[#340E2E] border border-[#C9A24A]/40 transition-all text-xs font-semibold tracking-wider uppercase shadow-sm hover:shadow whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#C9A24A] shrink-0" />
               <span>Visit Showroom</span>
             </button>
           </div>
@@ -171,7 +171,7 @@ export default function Navbar({ activePage, setActivePage }) {
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#44003B] hover:bg-[#E8D8B7]/40 rounded-lg focus:outline-none transition-colors"
+              className="p-2 text-[#47153F] hover:bg-[#E8D8B7]/40 rounded-lg focus:outline-none transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
@@ -189,8 +189,8 @@ export default function Navbar({ activePage, setActivePage }) {
                   onClick={() => handleNavClick(link.id)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-serif transition-colors text-left ${
                     activePage === link.id
-                      ? 'bg-[#44003B]/10 text-[#44003B] font-bold border-l-4 border-[#C9A24A]'
-                      : 'text-[#30232E] hover:bg-[#E8D8B7]/30 hover:text-[#44003B]'
+                      ? 'bg-[#47153F]/10 text-[#47153F] font-bold border-l-4 border-[#C9A24A]'
+                      : 'text-[#30232E] hover:bg-[#E8D8B7]/30 hover:text-[#47153F]'
                   }`}
                 >
                   <span>{link.label}</span>
@@ -199,14 +199,14 @@ export default function Navbar({ activePage, setActivePage }) {
               ))}
               <button
                 onClick={() => handleNavClick('disclaimer')}
-                className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-[#30232E]/70 hover:text-[#44003B]"
+                className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-[#30232E]/70 hover:text-[#47153F]"
               >
                 <span>Disclaimer</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C9A24A]" />
               </button>
               <button
                 onClick={() => handleNavClick('privacy')}
-                className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-[#30232E]/70 hover:text-[#44003B]"
+                className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-[#30232E]/70 hover:text-[#47153F]"
               >
                 <span>Privacy Policy</span>
                 <ChevronRight className="w-3.5 h-3.5 text-[#C9A24A]" />
@@ -226,7 +226,7 @@ export default function Navbar({ activePage, setActivePage }) {
 
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="w-full flex items-center justify-center gap-2 py-3 bg-[#44003B] text-[#FAF6EF] rounded-lg font-medium text-sm hover:bg-[#30232E] transition-colors"
+                className="w-full flex items-center justify-center gap-2 py-3 bg-[#47153F] text-[#FAF6EF] rounded-lg font-medium text-sm hover:bg-[#340E2E] transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#C9A24A]" />
                 <span>Call Showroom (+91 {BUSINESS_INFO.phone})</span>

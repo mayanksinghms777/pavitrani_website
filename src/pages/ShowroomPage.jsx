@@ -18,11 +18,10 @@ export default function ShowroomPage() {
   return (
     <div className="space-y-16 sm:space-y-24">
       
-      {/* 1. Header Banner (Official Logo Purple #44003B with Radiant Gradient to White) */}
-      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-32 sm:pb-36 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        {/* Soft Ambient Radial Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* 1. Header Banner (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
+      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        {/* Subtle Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
@@ -30,7 +29,7 @@ export default function ShowroomPage() {
             <span>81/1 Shivdaspur B.L.W Road, Varanasi</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#FAF6EF] leading-tight">
             The Pavitrani Showroom Experience
           </h1>
 
@@ -43,7 +42,7 @@ export default function ShowroomPage() {
               href={BUSINESS_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-white text-[#44003B] hover:bg-[#FAF8F5] font-semibold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-white text-[#47153F] hover:bg-[#FAF8F5] font-semibold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
             >
               <Navigation className="w-4 h-4 text-[#C9A24A]" />
               <span>Get Directions on Google Maps</span>
@@ -76,7 +75,7 @@ export default function ShowroomPage() {
             <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
               Exterior Architecture
             </div>
-            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl font-bold text-[#47153F]">
               Grand Illuminated Facade on B.L.W Road
             </h2>
             <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
@@ -101,7 +100,7 @@ export default function ShowroomPage() {
             <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
               Private Hospitality
             </div>
-            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl font-bold text-[#47153F]">
               Plush Royal Purple VIP Consultation Lounge
             </h2>
             <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
@@ -109,11 +108,11 @@ export default function ShowroomPage() {
             </p>
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
               <div className="p-3 bg-[#FAF6EF] rounded-xl border border-[#C9A24A]/20">
-                <p className="font-semibold text-[#44003B]">Private Consultation</p>
+                <p className="font-semibold text-[#47153F]">Private Consultation</p>
                 <p className="text-[11px] text-gray-500 mt-0.5">One-on-one specialist</p>
               </div>
               <div className="p-3 bg-[#FAF6EF] rounded-xl border border-[#C9A24A]/20">
-                <p className="font-semibold text-[#44003B]">Warm Hospitality</p>
+                <p className="font-semibold text-[#47153F]">Warm Hospitality</p>
                 <p className="text-[11px] text-gray-500 mt-0.5">Complimentary tea & water</p>
               </div>
             </div>
@@ -140,13 +139,13 @@ export default function ShowroomPage() {
             <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
               Curated Displays
             </div>
-            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl font-bold text-[#47153F]">
               Comprehensive Silverware & Gold Alcoves
             </h2>
             <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
               Our display galleries present an extensive inventory of certified 925 sterling silver bracelets, traditional silver utensils, heavy wedding payals, and certified diamond rings.
             </p>
-            <div className="p-4 rounded-xl bg-[#44003B] text-white space-y-1 text-xs">
+            <div className="p-4 rounded-xl bg-[#47153F] text-white space-y-1 text-xs">
               <p className="font-semibold text-[#E8D8B7]">Live Precision Weighing</p>
               <p className="text-white/80">Every piece weighed right before you on electronic digital scales with zero approximation.</p>
             </div>
@@ -162,7 +161,7 @@ export default function ShowroomPage() {
             <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
               Patron Comfort
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+            <h2 className="font-serif text-3xl font-bold text-[#47153F]">
               Showroom Amenities & Facilities
             </h2>
           </div>
@@ -170,25 +169,25 @@ export default function ShowroomPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
               <Car className="w-6 h-6 text-[#C9A24A]" />
-              <h4 className="font-serif text-base font-bold text-[#44003B]">Convenient Parking</h4>
+              <h4 className="font-serif text-base font-bold text-[#47153F]">Convenient Parking</h4>
               <p className="text-xs text-[#30232E]/75 font-sans">Ample parking space available for cars and two-wheelers right at our storefront on BLW Road.</p>
             </div>
 
             <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
               <Scale className="w-6 h-6 text-[#C9A24A]" />
-              <h4 className="font-serif text-base font-bold text-[#44003B]">Precision Weighing</h4>
+              <h4 className="font-serif text-base font-bold text-[#47153F]">Precision Weighing</h4>
               <p className="text-xs text-[#30232E]/75 font-sans">Govt-certified electronic balances ensuring absolute transparency down to milligram accuracy.</p>
             </div>
 
             <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
               <Coffee className="w-6 h-6 text-[#C9A24A]" />
-              <h4 className="font-serif text-base font-bold text-[#44003B]">Varanasi Hospitality</h4>
+              <h4 className="font-serif text-base font-bold text-[#47153F]">Varanasi Hospitality</h4>
               <p className="text-xs text-[#30232E]/75 font-sans">Warm Banarasi courtesy, comfortable seating, and refreshments for the whole family.</p>
             </div>
 
             <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
               <Award className="w-6 h-6 text-[#C9A24A]" />
-              <h4 className="font-serif text-base font-bold text-[#44003B]">Instant GST Invoicing</h4>
+              <h4 className="font-serif text-base font-bold text-[#47153F]">Instant GST Invoicing</h4>
               <p className="text-xs text-[#30232E]/75 font-sans">Official computerized tax invoices with GSTIN: 09AUQPS8232E2Z3 for all purchases.</p>
             </div>
           </div>
@@ -201,7 +200,7 @@ export default function ShowroomPage() {
           <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
             Interactive Map
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+          <h2 className="font-serif text-3xl font-bold text-[#47153F]">
             Find Us on B.L.W Road, Varanasi
           </h2>
         </div>
@@ -221,7 +220,7 @@ export default function ShowroomPage() {
             />
           </div>
 
-          <div className="p-6 bg-[#44003B] text-white flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="p-6 bg-[#47153F] text-white flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-center md:text-left">
               <p className="font-serif text-lg font-bold text-[#E8D8B7]">Pavitrani Jewellers</p>
               <p className="text-xs text-white/80">81/1 Shivdaspur B.L.W Road Near Kabir Ashram, Varanasi, U.P.</p>
@@ -232,7 +231,7 @@ export default function ShowroomPage() {
                 href={BUSINESS_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] text-xs font-semibold tracking-wider uppercase transition-all flex items-center gap-1.5 shadow-sm"
+                className="px-5 py-2.5 rounded-full bg-[#FAF6EF] text-[#47153F] hover:bg-[#E8D8B7] text-xs font-semibold tracking-wider uppercase transition-all flex items-center gap-1.5 shadow-sm"
               >
                 <Navigation className="w-3.5 h-3.5 text-[#C9A24A]" />
                 <span>Open in Maps</span>

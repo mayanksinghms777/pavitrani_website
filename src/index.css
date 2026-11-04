@@ -2,7 +2,9 @@
 
 @layer base {
   :root {
-    --royal-plum: #44003B;
+    --royal-plum: #47153F;
+    --royal-plum-light: #5E1D53;
+    --royal-plum-deep: #300C2A;
     --antique-gold: #C9A24A;
     --warm-ivory: #FAF6EF;
     --champagne: #E8D8B7;
@@ -29,17 +31,17 @@
 }
 
 /* Luxury Brand Palette Utilities */
-.bg-royal-plum { background-color: #44003B; }
-.text-royal-plum { color: #44003B; }
-.border-royal-plum { border-color: #44003B; }
+.bg-royal-plum { background-color: #47153F; }
+.text-royal-plum { color: #47153F; }
+.border-royal-plum { border-color: #47153F; }
 
-/* Gradient to White Utilities */
-.bg-plum-gradient-to-white {
-  background: linear-gradient(180deg, #44003B 0%, #44003B 55%, #550849 70%, #FFFFFF 100%);
+/* Standard Elegant Luxury Gradients */
+.bg-hero-royal-gradient {
+  background: radial-gradient(ellipse at 50% 0%, #5E1D53 0%, #47153F 55%, #300C2A 100%);
 }
 
-.bg-plum-radial-glow {
-  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+.bg-banner-royal-gradient {
+  background: linear-gradient(135deg, #3A0E34 0%, #47153F 50%, #350D2E 100%);
 }
 
 .bg-antique-gold { background-color: #C9A24A; }

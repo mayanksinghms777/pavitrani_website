@@ -57,7 +57,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#30232E] font-sans antialiased selection:bg-[#C9A24A]/25 selection:text-[#44003B]">
+    <div className="min-h-screen flex flex-col bg-white text-[#30232E] font-sans antialiased selection:bg-[#C9A24A]/25 selection:text-[#47153F]">
       {/* Sticky Main Navigation */}
       <Navbar 
         activePage={activePage} 

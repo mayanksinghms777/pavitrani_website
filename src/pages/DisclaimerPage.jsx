@@ -6,11 +6,10 @@ export default function DisclaimerPage({ setActivePage }) {
   return (
     <div className="space-y-12">
       
-      {/* Header (Official Logo Purple #44003B with Radiant Gradient to White) */}
-      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-28 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        {/* Soft Ambient Radial Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* Header (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
+      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        {/* Subtle Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
@@ -18,7 +17,7 @@ export default function DisclaimerPage({ setActivePage }) {
             <span>Official Legal Notice</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#FAF6EF]">
             Product & Pricing Disclaimer
           </h1>
 
@@ -41,7 +40,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 1 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">1.</span> Product Representations & Photography
             </h2>
             <p>
@@ -54,7 +53,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 2 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">2.</span> Daily Precious Metal Price Fluctuation
             </h2>
             <p>
@@ -67,7 +66,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 3 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">3.</span> Handcrafted Weight & Metric Variances
             </h2>
             <p>
@@ -82,7 +81,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 4 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">4.</span> In-Stock Availability & Reservations
             </h2>
             <p>
@@ -95,7 +94,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 5 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">5.</span> Hallmarking & Quality Certification
             </h2>
             <p>
@@ -105,7 +104,7 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 6 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+            <h2 className="font-serif text-2xl font-bold text-[#47153F] flex items-center gap-2">
               <span className="text-[#C9A24A]">6.</span> Contact for Pricing & Order Clarifications
             </h2>
             <p>
@@ -130,7 +129,7 @@ export default function DisclaimerPage({ setActivePage }) {
                 window.location.hash = 'collections';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-4 py-2 rounded-xl bg-[#44003B] text-[#FAF6EF] text-xs font-semibold hover:bg-[#30232E] transition-colors"
+              className="px-4 py-2 rounded-xl bg-[#47153F] text-[#FAF6EF] text-xs font-semibold hover:bg-[#30232E] transition-colors"
             >
               Browse Collections
             </button>
