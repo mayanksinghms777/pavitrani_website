@@ -16,24 +16,28 @@ import { BUSINESS_INFO, SHOWROOM_GALLERY } from '../data/business';
 
 export default function ShowroomPage() {
   return (
-    <div className="space-y-16 sm:space-y-24">
+    <div className="space-y-16 sm:space-y-24 bg-[#FAF6EF]">
       
-      {/* 1. Header Banner (Official Brand Royal Plum #47153F) */}
-      <section className="bg-[#47153F] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
-        {/* Subtle Ambient Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
+      {/* 1. Header Banner (Warm Ivory Luxury Editorial Header) */}
+      <section className="bg-[#FAF6EF] text-[#30232E] pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/25 text-center relative overflow-hidden">
+        {/* Subtle Luxury Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(201,162,74,0.15)_0%,transparent_65%)] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C9A24A]/40 text-[#47153F] text-xs font-semibold uppercase tracking-widest shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>81/1 Shivdaspur B.L.W Road, Varanasi</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#FAF6EF] leading-tight">
-            The Pavitrani Showroom Experience
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#30232E] leading-tight">
+            The Pavitrani <span className="text-[#47153F]">Showroom Experience</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-[#FAF6EF]/85 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+          <p className="font-serif italic text-xl sm:text-2xl text-[#C9A24A] font-normal tracking-wide">
+            “Jewels as Pure as You”
+          </p>
+
+          <p className="text-base sm:text-lg text-[#30232E]/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
             Step into a world where sacred Varanasi tradition meets modern luxury. Designed for leisurely family consultations and transparent transactions.
           </p>
 
@@ -42,7 +46,7 @@ export default function ShowroomPage() {
               href={BUSINESS_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-white text-[#47153F] hover:bg-[#FAF8F5] font-semibold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
+              className="px-6 py-3.5 rounded-full bg-[#47153F] text-white hover:bg-[#381032] font-semibold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
             >
               <Navigation className="w-4 h-4 text-[#C9A24A]" />
               <span>Get Directions on Google Maps</span>
@@ -50,7 +54,7 @@ export default function ShowroomPage() {
 
             <a
               href={`tel:+91${BUSINESS_INFO.phone}`}
-              className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 text-[#FAF6EF] border border-[#C9A24A]/40 font-medium text-xs tracking-wider transition-all flex items-center gap-2"
+              className="px-6 py-3.5 rounded-full bg-white text-[#47153F] hover:bg-[#FAF6EF] border border-[#47153F]/40 font-medium text-xs tracking-wider transition-all flex items-center gap-2 shadow-xs"
             >
               <Phone className="w-4 h-4 text-[#C9A24A]" />
               <span>Call: {BUSINESS_INFO.phoneDisplay}</span>
@@ -60,7 +64,7 @@ export default function ShowroomPage() {
       </section>
 
       {/* 2. Visual Tour: 4 Detailed Showroom Photo Sections */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 space-y-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 space-y-16">
         
         {/* Photo 1: Illuminated Night Facade */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

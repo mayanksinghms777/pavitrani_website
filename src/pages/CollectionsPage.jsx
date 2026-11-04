@@ -37,31 +37,35 @@ export default function CollectionsPage({ onSelectProduct, activeFilter, setActi
   }, [activeFilter, searchQuery]);
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 bg-[#FAF6EF]">
       
-      {/* 1. Header Banner (Official Brand Royal Plum #47153F) */}
-      <section className="bg-[#47153F] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
-        {/* Subtle Ambient Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
+      {/* 1. Header Banner (Warm Ivory Luxury Editorial Header) */}
+      <section className="bg-[#FAF6EF] text-[#30232E] pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/25 text-center relative overflow-hidden">
+        {/* Subtle Luxury Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(201,162,74,0.15)_0%,transparent_65%)] pointer-events-none" />
         
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C9A24A]/40 text-[#47153F] text-xs font-semibold uppercase tracking-widest shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>Showroom Gallery & Catalogue</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#FAF6EF]">
-            Jewellery Collections
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#30232E]">
+            Jewellery <span className="text-[#47153F]">Collections</span>
           </h1>
 
-          <p className="text-sm sm:text-base text-[#FAF6EF]/85 max-w-2xl mx-auto font-light leading-relaxed font-sans">
-            Explore authentic jewellery photographed straight from our Varanasi showroom inventory. Every piece exemplifies our motto: <span className="italic text-[#E8D8B7]">"Jewels as Pure as You"</span>.
+          <p className="font-serif italic text-xl sm:text-2xl text-[#C9A24A] font-normal tracking-wide">
+            “Jewels as Pure as You”
+          </p>
+
+          <p className="text-sm sm:text-base text-[#30232E]/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+            Explore authentic jewellery photographed straight from our Varanasi showroom inventory. Every piece exemplifies uncompromising purity and generational trust.
           </p>
         </div>
       </section>
 
       {/* 2. Interactive Filter & Search Bar */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-14 relative z-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="bg-white rounded-2xl shadow-luxury border border-[#C9A24A]/30 p-4 sm:p-6 space-y-4">
           
           {/* Search Input & Info */}

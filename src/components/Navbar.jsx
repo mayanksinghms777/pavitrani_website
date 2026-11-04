@@ -74,12 +74,12 @@ export default function Navbar({ activePage, setActivePage }) {
           ? 'shadow-sm py-2.5 border-b border-[#C9A24A]/30' 
           : 'py-3.5 border-b border-[#C9A24A]/20'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 lg:gap-8">
           
           {/* Brand Logo & Name */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 sm:gap-3.5 text-left group focus:outline-none min-w-0 mr-3"
+            className="flex items-center gap-3 sm:gap-3.5 text-left group focus:outline-none shrink-0 mr-6 sm:mr-8 lg:mr-10 xl:mr-14"
             aria-label="Pavitrani Jewellers Home"
           >
             {/* Official Supplied Lotus Logo in authentic Royal Purple without any background or color filter */}
@@ -87,7 +87,7 @@ export default function Navbar({ activePage, setActivePage }) {
               <img 
                 src="/logo.png" 
                 alt="Pavitrani Jewellers Official Lotus Emblem" 
-                className="h-10 sm:h-12 md:h-13 w-auto object-contain transition-all"
+                className="h-10 sm:h-12 md:h-12 w-auto object-contain transition-all"
                 loading="eager"
               />
             </div>
@@ -95,13 +95,13 @@ export default function Navbar({ activePage, setActivePage }) {
             {/* Brand Lockup: PAVITRANI JEWELLERS on ONE horizontal line on desktop */}
             <div className="flex flex-col min-w-0">
               <div className="flex items-baseline gap-1.5 sm:gap-2 leading-none">
-                <span className="font-serif text-base sm:text-lg md:text-xl lg:text-[21px] xl:text-[23px] font-bold tracking-[0.12em] text-[#47153F] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
+                <span className="font-serif text-base sm:text-lg md:text-xl lg:text-[18px] xl:text-[21px] font-bold tracking-[0.08em] text-[#47153F] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
                   PAVITRANI JEWELLERS
                 </span>
               </div>
               
               {/* Tagline underneath */}
-              <span className="font-serif italic text-[10px] sm:text-[11px] md:text-xs text-[#C9A24A] tracking-[0.2em] uppercase font-medium leading-tight mt-1 whitespace-nowrap">
+              <span className="font-serif italic text-[10px] sm:text-[11px] md:text-xs text-[#C9A24A] tracking-[0.18em] uppercase font-medium leading-tight mt-1 whitespace-nowrap">
                 Jewels as Pure as You
               </span>
               
@@ -112,8 +112,8 @@ export default function Navbar({ activePage, setActivePage }) {
             </div>
           </button>
 
-          {/* Desktop Navigation Links (Center - Guaranteed strictly on ONE horizontal line) */}
-          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 shrink-0">
+          {/* Desktop Navigation Links (Center - Guaranteed strictly on ONE horizontal line with comfortable spacing) */}
+          <div className="hidden lg:flex items-center space-x-1.5 xl:space-x-3 shrink-0">
             {navLinks.map((link) => {
               const isActive = activePage === link.id;
               return (

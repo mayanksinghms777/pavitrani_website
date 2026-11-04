@@ -4,31 +4,35 @@ import { BUSINESS_INFO } from '../data/business';
 
 export default function DisclaimerPage({ setActivePage }) {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 bg-[#FAF6EF]">
       
-      {/* Header (Official Brand Royal Plum #47153F) */}
-      <section className="bg-[#47153F] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
-        {/* Subtle Ambient Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
+      {/* Header (Warm Ivory Luxury Editorial Header) */}
+      <section className="bg-[#FAF6EF] text-[#30232E] pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/25 text-center relative overflow-hidden">
+        {/* Subtle Luxury Ambient Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(201,162,74,0.15)_0%,transparent_65%)] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C9A24A]/40 text-[#47153F] text-xs font-semibold uppercase tracking-widest shadow-xs">
             <FileText className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>Official Legal Notice</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#FAF6EF]">
-            Product & Pricing Disclaimer
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#30232E]">
+            Product & Pricing <span className="text-[#47153F]">Disclaimer</span>
           </h1>
 
-          <p className="text-sm sm:text-base text-[#FAF6EF]/85 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+          <p className="font-serif italic text-xl sm:text-2xl text-[#C9A24A] font-normal tracking-wide">
+            “Jewels as Pure as You”
+          </p>
+
+          <p className="text-sm sm:text-base text-[#30232E]/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
             Important information regarding product representations, daily precious metal market price variations, and showroom confirmations for Pavitrani Jewellers.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20 pb-12">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pb-16">
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-luxury border border-[#C9A24A]/25 space-y-8 text-left text-[#30232E]/85 leading-relaxed font-sans text-sm">
           
           <div className="p-4 rounded-xl bg-[#FAF6EF] border border-[#C9A24A]/30 flex items-start gap-3 text-[#30232E]">

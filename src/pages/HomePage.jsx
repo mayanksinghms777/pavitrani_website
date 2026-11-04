@@ -73,22 +73,21 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             
-            {/* Left Column: Brand Story & CTAs (45% on desktop) */}
-            <div className="lg:col-span-5 space-y-6 sm:space-y-8 text-center lg:text-left">
+            {/* Left Column: Brand Story & CTAs (Expanded to 7 cols on desktop) */}
+            <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
               
-              {/* Brand Label */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#C9A24A]/40 text-[#47153F] shadow-xs text-xs font-semibold tracking-widest uppercase">
+              {/* Brand Origin Label (Removed Pavitrani Jewellers, retained Varanasi) */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#C9A24A]/40 text-[#47153F] shadow-xs text-xs font-semibold tracking-widest uppercase">
                 <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
-                <span>Pavitrani Jewellers • Varanasi</span>
+                <span>Varanasi • Pure Jewellery Atelier</span>
               </div>
 
-              {/* Main Headline */}
+              {/* Main Headline: Pavitrani Jewellers */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#30232E] font-medium leading-[1.12] tracking-tight">
-                  Jewellery That <br />
-                  <span className="italic font-normal text-[#47153F]">Celebrates</span> Your Story.
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#30232E] font-bold leading-[1.1] tracking-tight">
+                  Pavitrani <span className="text-[#47153F]">Jewellers</span>
                 </h1>
 
                 <p className="font-serif italic text-2xl sm:text-3xl text-[#C9A24A] font-normal tracking-wide">
@@ -137,19 +136,19 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
 
             </div>
 
-            {/* Right Column: Hero Visual (55% on desktop) */}
-            <div className="lg:col-span-7 relative">
-              <div className="relative mx-auto max-w-lg lg:max-w-none">
+            {/* Right Column: Hero Visual (Medium Proportioned Size - 5 cols) */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md">
                 
                 {/* Decorative Antique Gold Outer Halo */}
                 <div 
-                  className="absolute -inset-3 sm:-inset-4 rounded-3xl bg-gradient-to-tr from-[#C9A24A]/25 via-transparent to-[#47153F]/15 blur-xl opacity-75 pointer-events-none" 
+                  className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-[#C9A24A]/20 via-transparent to-[#47153F]/10 blur-lg opacity-70 pointer-events-none" 
                   aria-hidden="true" 
                 />
 
-                {/* Primary Framed Visual Card */}
-                <div className="relative rounded-3xl overflow-hidden bg-white p-3 sm:p-4 shadow-2xl border border-[#C9A24A]/30">
-                  <div className="relative aspect-4/5 sm:aspect-4/5 lg:aspect-[5/6] rounded-2xl overflow-hidden group bg-[#2A1D27]">
+                {/* Medium-Sized Framed Visual Card */}
+                <div className="relative rounded-2xl overflow-hidden bg-white p-2.5 sm:p-3 shadow-xl border border-[#C9A24A]/30">
+                  <div className="relative aspect-[4/5] max-h-[380px] sm:max-h-[420px] rounded-xl overflow-hidden group bg-[#2A1D27]">
                     
                     {/* The striking hero jewellery photograph */}
                     <img
@@ -163,52 +162,52 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                     {/* Floating Luxury Tag on Image (Top Left) */}
-                    <div className="absolute top-4 left-4 bg-[#47153F]/90 backdrop-blur-md text-[#E8D8B7] text-xs font-semibold px-3.5 py-1.5 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow-md">
-                      <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
+                    <div className="absolute top-3 left-3 bg-[#47153F]/90 backdrop-blur-md text-[#E8D8B7] text-[11px] font-semibold px-3 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow-md">
+                      <Sparkles className="w-3 h-3 text-[#C9A24A]" />
                       <span>Signature Showroom Creation</span>
                     </div>
 
                     {/* Floating Brand Origin Badge (Top Right) */}
-                    <div className="hidden sm:flex absolute top-4 right-4 bg-white/90 backdrop-blur-md text-[#47153F] text-[11px] font-medium px-3 py-1 rounded-full border border-[#C9A24A]/30 shadow-sm items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#C9A24A]" />
+                    <div className="hidden sm:flex absolute top-3 right-3 bg-white/90 backdrop-blur-md text-[#47153F] text-[10px] font-medium px-2.5 py-0.5 rounded-full border border-[#C9A24A]/30 shadow-sm items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-[#C9A24A]" />
                       <span>Mayank Metal Works</span>
                     </div>
 
                     {/* Editorial Overlay Caption (Bottom) */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-black/65 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-white/15 text-white space-y-1.5">
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/65 backdrop-blur-md p-3.5 rounded-xl border border-white/15 text-white space-y-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-semibold text-[#E8D8B7] uppercase tracking-widest">
+                        <span className="text-[10px] font-semibold text-[#E8D8B7] uppercase tracking-widest">
                           925 Sterling Silver
                         </span>
-                        <span className="text-[11px] text-white/80 font-mono">
+                        <span className="text-[10px] text-white/80 font-mono">
                           HUID Hallmarked
                         </span>
                       </div>
-                      <h3 className="font-serif text-xl sm:text-2xl text-white font-medium">
+                      <h3 className="font-serif text-lg sm:text-xl text-white font-medium">
                         Solitaire Teardrop Halo Tennis Bracelet
                       </h3>
-                      <p className="text-xs text-white/85 line-clamp-2 font-light">
-                        Handcrafted in certified 925 sterling silver with brilliant teardrop clusters and high-refraction diamond lustre.
+                      <p className="text-[11px] text-white/85 line-clamp-2 font-light">
+                        Handcrafted in certified 925 sterling silver with brilliant teardrop clusters.
                       </p>
                     </div>
 
                   </div>
 
                   {/* Micro-Footer Below Frame */}
-                  <div className="mt-3 px-3 py-2 bg-[#FAF6EF] rounded-xl flex items-center justify-between text-xs text-[#30232E]/85 border border-[#C9A24A]/20">
-                    <span className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span className="font-medium">In-Store Preview Available</span>
+                  <div className="mt-2.5 px-3 py-1.5 bg-[#FAF6EF] rounded-lg flex items-center justify-between text-xs text-[#30232E]/85 border border-[#C9A24A]/20">
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span className="font-medium text-[11px]">In-Store Preview</span>
                     </span>
                     <button
                       onClick={() => {
                         const product = PRODUCTS.find(p => p.id === 'solitaire-teardrop-halo-bracelet');
                         if (product && onSelectProduct) onSelectProduct(product);
                       }}
-                      className="text-[#47153F] hover:text-[#C9A24A] font-semibold uppercase tracking-wider text-[11px] flex items-center gap-1 transition-colors cursor-pointer"
+                      className="text-[#47153F] hover:text-[#C9A24A] font-semibold uppercase tracking-wider text-[10px] flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       <span>Quick View</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
+                      <ChevronRight className="w-3 h-3" />
                     </button>
                   </div>
 
