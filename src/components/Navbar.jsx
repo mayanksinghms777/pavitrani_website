@@ -74,35 +74,38 @@ export default function Navbar({ activePage, setActivePage }) {
           ? 'bg-[#2D0A27]/98 backdrop-blur-md shadow-xl py-3 border-b border-[#C5A059]/30' 
           : 'bg-[#2D0A27] py-4 border-b border-[#C5A059]/20'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Brand Logo & Name */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 text-left group focus:outline-none"
+            className="flex items-center gap-2.5 sm:gap-3.5 text-left group focus:outline-none min-w-0 mr-2"
             aria-label="Pavitrani Jewellers Home"
           >
-            <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 p-1 border border-[#C5A059]/40 flex items-center justify-center shadow-inner group-hover:border-[#E0C17E] transition-colors">
+            {/* Luminous Golden Lotus Logo without background or circle */}
+            <div className="relative flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
               <img 
                 src="/logo.png" 
-                alt="Pavitrani Jewellers Official Lotus Logo" 
-                className="w-full h-full object-contain filter drop-shadow"
+                alt="Pavitrani Jewellers Official Lotus Emblem" 
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain filter drop-shadow-[0_0_14px_rgba(224,193,126,0.65)] group-hover:drop-shadow-[0_0_22px_rgba(224,193,126,0.9)] transition-all"
                 loading="eager"
               />
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-baseline gap-2">
-                <span className="font-serif text-2xl md:text-3xl font-semibold tracking-wider text-[#FAF8F5] group-hover:text-[#E0C17E] transition-colors">
+
+            {/* Brand Typography with PAVITRANI & JEWELLERS of identical size */}
+            <div className="flex flex-col min-w-0">
+              <div className="flex flex-wrap items-baseline gap-x-1.5 sm:gap-x-2 leading-tight">
+                <span className="font-serif text-base sm:text-xl md:text-2xl font-bold tracking-wider text-[#FAF8F5] group-hover:text-[#E0C17E] transition-colors whitespace-nowrap">
                   PAVITRANI
                 </span>
-                <span className="font-display text-xs md:text-sm tracking-widest text-[#C5A059] uppercase font-semibold">
+                <span className="font-serif text-base sm:text-xl md:text-2xl font-bold tracking-wider text-[#E0C17E] transition-colors whitespace-nowrap">
                   JEWELLERS
                 </span>
               </div>
-              <span className="text-[10px] md:text-xs text-[#FAF8F5]/70 tracking-widest uppercase italic font-serif">
+              <span className="text-[9px] sm:text-xs text-[#FAF8F5]/80 tracking-[0.16em] uppercase italic font-serif leading-tight pt-0.5 whitespace-nowrap">
                 Jewels as Pure as You
               </span>
-              <span className="text-[9px] text-[#C5A059]/90 tracking-wide uppercase font-sans hidden sm:block">
+              <span className="text-[8px] sm:text-[9px] text-[#C5A059]/90 tracking-wider uppercase font-sans hidden md:block leading-tight pt-0.5">
                 A unit of Mayank Metal Works
               </span>
             </div>
@@ -131,8 +134,8 @@ export default function Navbar({ activePage, setActivePage }) {
             })}
           </div>
 
-          {/* Action Buttons on Right */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Action Buttons on Right (Desktop) */}
+          <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
             <a
               href={BUSINESS_INFO.whatsappLink}
               target="_blank"
@@ -153,23 +156,24 @@ export default function Navbar({ activePage, setActivePage }) {
             </button>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile WhatsApp & Menu Button (With safe clearance) */}
+          <div className="flex lg:hidden items-center gap-2 flex-shrink-0 ml-auto pl-2">
             <a
               href={BUSINESS_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 rounded-full"
+              className="p-2 sm:p-2.5 text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 rounded-full hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
               aria-label="WhatsApp Showroom"
+              title="Chat on WhatsApp"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#FAF8F5] hover:text-[#C5A059] focus:outline-none"
+              className="p-2 text-[#FAF8F5] hover:text-[#C5A059] focus:outline-none rounded-lg hover:bg-white/5 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>

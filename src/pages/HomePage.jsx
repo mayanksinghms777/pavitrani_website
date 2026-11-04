@@ -45,12 +45,14 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
               <span>Varanasi's Destination for Pure Jewellery</span>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#FAF8F5] leading-[1.1]">
-                Jewels as Pure <br className="hidden sm:block" />
-                <span className="text-gold-gradient italic font-normal">as You</span>
+                Pavitrani <span className="text-gold-gradient">Jewellers</span>
               </h1>
-              <p className="text-sm sm:text-base text-[#FAF8F5]/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+              <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#E0C17E] tracking-wide font-normal">
+                Jewels as Pure as You
+              </p>
+              <p className="text-sm sm:text-base text-[#FAF8F5]/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
                 Step into <strong className="text-[#E0C17E] font-medium">Pavitrani Jewellers</strong> on B.L.W Road, Varanasi. Experience handcrafted 925 sterling silver ornaments, hallmarked gold heirlooms, and certified lab-grown diamonds created with generations of metallurgical integrity.
               </p>
             </div>

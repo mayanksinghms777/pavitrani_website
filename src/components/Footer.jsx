@@ -37,19 +37,24 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
           {/* Col 1: Brand & Identity */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-white/10 p-1 border border-[#C5A059]/50 flex items-center justify-center">
+              <div className="relative flex-shrink-0">
                 <img 
                   src="/logo.png" 
-                  alt="Pavitrani Jewellers Official Logo" 
-                  className="w-full h-full object-contain"
+                  alt="Pavitrani Jewellers Official Lotus Emblem" 
+                  className="h-12 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(224,193,126,0.65)]"
                 />
               </div>
               <div>
-                <h3 className="font-serif text-2xl font-bold tracking-wider text-[#FAF8F5]">
-                  PAVITRANI
-                </h3>
-                <p className="text-xs uppercase tracking-widest text-[#C5A059] font-medium">
-                  JEWELLERS
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-serif text-xl font-bold tracking-wider text-[#FAF8F5]">
+                    PAVITRANI
+                  </span>
+                  <span className="font-serif text-xl font-bold tracking-wider text-[#E0C17E]">
+                    JEWELLERS
+                  </span>
+                </div>
+                <p className="text-[10px] uppercase tracking-widest text-[#FAF8F5]/70 font-sans pt-0.5">
+                  A unit of Mayank Metal Works
                 </p>
               </div>
             </div>
