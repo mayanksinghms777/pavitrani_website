@@ -13,9 +13,14 @@ echo "=========================================================="
 echo "--> Updating system packages..."
 apt update -y
 
-# 2. Install Nginx, Certbot & Utilities
+# 2. Install Nginx, Certbot & Utilities (without altering Docker or UFW)
 echo "--> Installing Nginx, Certbot, and rsync..."
-apt install -y nginx certbot python3-certbot-nginx rsync ufw curl
+apt install -y nginx certbot python3-certbot-nginx rsync curl
+
+# Check Docker status to assure non-interference
+if command -v docker >/dev/null 2>&1; then
+    echo "--> Note: Docker detected. Preserving all running Docker containers and iptables rules untouched."
+fi
 
 # 3. Create Web Directory and Build
 echo "--> Creating web root at /var/www/pavitrani/dist..."
@@ -87,13 +92,16 @@ ln -sf /etc/nginx/sites-available/pavitrani.com /etc/nginx/sites-enabled/
 rm -f /etc/nginx/sites-enabled/default || true
 
 nginx -t
-systemctl reload nginx
+systemctl reload nginx || systemctl restart nginx || service nginx restart
 
-# 5. Open Firewall Ports
-echo "--> Configuring UFW Firewall for HTTP, HTTPS & SSH..."
-ufw allow 'Nginx Full'
-ufw allow OpenSSH
-ufw --force enable || true
+# 5. Firewall Check (Safe for Docker)
+if command -v ufw >/dev/null 2>&1 && ufw status | grep -qw "active"; then
+    echo "--> UFW is active. Allowing HTTP (80) & HTTPS (443)..."
+    ufw allow 'Nginx Full'
+    ufw allow OpenSSH
+else
+    echo "--> UFW is not active or managed externally. Leaving firewall unchanged so Docker networking is unaffected."
+fi
 
 # 6. Install SSL via Certbot (Let's Encrypt)
 echo "--> Requesting SSL Certificate for pavitrani.com..."
