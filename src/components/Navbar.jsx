@@ -68,11 +68,11 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
       </div>
 
-      {/* 2. Main Luxury Navigation Bar (Clean Luminous White with Gold Accent Border) */}
-      <nav className={`w-full transition-all duration-300 bg-white/95 backdrop-blur-md ${
+      {/* 2. Main Luxury Navigation Bar (Warm Ivory with Antique Gold Accent Border & Subtle Shadow) */}
+      <nav className={`w-full transition-all duration-300 bg-[#FAF6EF]/95 backdrop-blur-md ${
         isScrolled 
-          ? 'shadow-md py-2.5 border-b border-[#C9A24A]/40' 
-          : 'py-3.5 border-b border-[#C9A24A]/25'
+          ? 'shadow-sm py-2.5 border-b border-[#C9A24A]/30' 
+          : 'py-3.5 border-b border-[#C9A24A]/20'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
