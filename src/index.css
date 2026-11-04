@@ -3,8 +3,8 @@
 @layer base {
   :root {
     --royal-plum: #47153F;
-    --royal-plum-light: #5E1D53;
-    --royal-plum-deep: #300C2A;
+    --royal-plum-light: #47153F;
+    --royal-plum-deep: #47153F;
     --antique-gold: #C9A24A;
     --warm-ivory: #FAF6EF;
     --champagne: #E8D8B7;
@@ -35,13 +35,13 @@
 .text-royal-plum { color: #47153F; }
 .border-royal-plum { border-color: #47153F; }
 
-/* Standard Elegant Luxury Gradients */
+/* Standard Elegant Luxury Solid Color & Overlays */
 .bg-hero-royal-gradient {
-  background: radial-gradient(ellipse at 50% 0%, #5E1D53 0%, #47153F 55%, #300C2A 100%);
+  background-color: #47153F;
 }
 
 .bg-banner-royal-gradient {
-  background: linear-gradient(135deg, #3A0E34 0%, #47153F 50%, #350D2E 100%);
+  background-color: #47153F;
 }
 
 .bg-antique-gold { background-color: #C9A24A; }

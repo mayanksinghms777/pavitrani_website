@@ -6,8 +6,8 @@ export default function PrivacyPolicyPage({ setActivePage }) {
   return (
     <div className="space-y-12">
       
-      {/* Header (Official Brand Royal Plum #47153F with Standard Elegant Gradient) */}
-      <section className="bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+      {/* Header (Official Brand Royal Plum #47153F) */}
+      <section className="bg-[#47153F] text-[#FAF8F5] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
         {/* Subtle Ambient Sheen */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
 

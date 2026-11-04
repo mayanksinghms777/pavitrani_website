@@ -32,28 +32,45 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
   return (
     <div className="space-y-20 sm:space-y-28">
       
-      {/* 1. HERO SECTION (Official Brand Royal Plum #47153F with Standard Elegant Radial Gradient) */}
-      <section className="relative min-h-[85vh] flex items-center bg-[radial-gradient(ellipse_at_50%_0%,_#5E1D53_0%,_#47153F_55%,_#300C2A_100%)] text-[#FAF8F5] overflow-hidden py-16 lg:py-24 border-b border-[#C9A24A]/25">
+      {/* 1. HERO SECTION (Official Brand Royal Plum #47153F with Authentic Showroom Facade Background) */}
+      <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center bg-[#47153F] text-[#FAF8F5] overflow-hidden py-16 lg:py-24 border-b border-[#C9A24A]/30">
+        
+        {/* Background Image: Authentic Pavitrani Jewellers Store Front (Showroom Night Facade) */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <img
+            src="/images/showroom/pavitrani-showroom-facade-night.webp"
+            alt="Pavitrani Jewellers Varanasi Showroom Front Facade"
+            className="w-full h-full object-cover object-center scale-105"
+          />
+          {/* Exact Brand Purple #47153F Overlays */}
+          {/* Base blend with exact #47153F */}
+          <div className="absolute inset-0 bg-[#47153F]/80 mix-blend-multiply" />
+          {/* Horizontal gradient: deeper on text side, more transparent on right side */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#47153F] via-[#47153F]/85 to-[#47153F]/65" />
+          {/* Top and bottom subtle vignettes blending seamlessly into the navbar and the next section */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#47153F]/60 via-transparent to-[#47153F]" />
+        </div>
+
         {/* Subtle Fine Gold Ambient Sheen */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.08)_0%,_transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(201,162,74,0.06)_0%,_transparent_50%)] pointer-events-none z-1" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Text Content */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#47153F]/80 backdrop-blur-md border border-[#C9A24A]/50 text-[#E8D8B7] text-xs font-medium tracking-wide shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
               <span>Varanasi's Destination for Pure Jewellery</span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-md">
                 Pavitrani <span className="bg-gradient-to-r from-white via-[#FAF6EF] to-[#E8D8B7] bg-clip-text text-transparent">Jewellers</span>
               </h1>
-              <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#C9A24A] tracking-wide font-normal">
+              <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#E8D8B7] tracking-wide font-normal drop-shadow-sm">
                 Jewels as Pure as You
               </p>
-              <p className="text-sm sm:text-base text-white/90 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
+              <p className="text-sm sm:text-base text-white/95 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1 drop-shadow-xs">
                 Step into <strong className="text-[#E8D8B7] font-medium">Pavitrani Jewellers</strong> on B.L.W Road, Varanasi. Experience handcrafted 925 sterling silver ornaments, hallmarked gold heirlooms, and certified lab-grown diamonds created with generations of metallurgical integrity.
               </p>
             </div>
@@ -66,7 +83,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'collections';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-7 py-3.5 rounded-full bg-white text-[#47153F] hover:bg-[#FAF8F5] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                className="px-7 py-3.5 rounded-full bg-white text-[#47153F] hover:bg-[#FAF8F5] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-2xl flex items-center gap-2 transform hover:-translate-y-0.5"
               >
                 <span>Explore Collections</span>
                 <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -76,7 +93,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs sm:text-sm tracking-wider transition-all flex items-center gap-2 shadow"
+                className="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs sm:text-sm tracking-wider transition-all flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp Showroom</span>
@@ -88,25 +105,25 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'showroom';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 text-xs sm:text-sm tracking-wider transition-all"
+                className="px-6 py-3.5 rounded-full bg-[#47153F]/70 hover:bg-[#47153F]/90 backdrop-blur-md text-[#FAF6EF] border border-[#C9A24A]/40 text-xs sm:text-sm tracking-wider transition-all shadow-md transform hover:-translate-y-0.5"
               >
                 <span>Virtual Showroom</span>
               </button>
             </div>
 
             {/* Micro Credibility Indicators */}
-            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-[#C9A24A]/20 text-center lg:text-left">
+            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-[#C9A24A]/30 text-center lg:text-left">
               <div>
-                <p className="font-serif text-2xl font-bold text-[#E8D8B7]">925</p>
-                <p className="text-[11px] text-[#FAF6EF]/75 uppercase tracking-wider">Certified Silver</p>
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-[#E8D8B7] drop-shadow-sm">925</p>
+                <p className="text-[11px] text-[#FAF6EF]/85 uppercase tracking-wider">Certified Silver</p>
               </div>
               <div>
-                <p className="font-serif text-2xl font-bold text-[#E8D8B7]">100%</p>
-                <p className="text-[11px] text-[#FAF6EF]/75 uppercase tracking-wider">Hallmarked Purity</p>
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-[#E8D8B7] drop-shadow-sm">100%</p>
+                <p className="text-[11px] text-[#FAF6EF]/85 uppercase tracking-wider">Hallmarked Purity</p>
               </div>
               <div>
-                <p className="font-serif text-2xl font-bold text-[#E8D8B7]">Varanasi</p>
-                <p className="text-[11px] text-[#FAF6EF]/75 uppercase tracking-wider">B.L.W Road Landmark</p>
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-[#E8D8B7] drop-shadow-sm">Varanasi</p>
+                <p className="text-[11px] text-[#FAF6EF]/85 uppercase tracking-wider">B.L.W Road Landmark</p>
               </div>
             </div>
 
@@ -117,11 +134,11 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Outer subtle gold glow */}
-              <div className="absolute -inset-3 rounded-3xl bg-[#C9A24A]/20 blur-xl opacity-80" />
+              <div className="absolute -inset-3 rounded-3xl bg-[#C9A24A]/25 blur-xl opacity-80" />
 
               {/* Main Visual Card */}
-              <div className="relative rounded-2xl overflow-hidden bg-[#30232E] border border-[#C9A24A]/40 shadow-2xl p-3">
-                <div className="relative aspect-4/5 rounded-xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden bg-[#47153F]/85 backdrop-blur-md border border-[#C9A24A]/45 shadow-2xl p-3">
+                <div className="relative aspect-4/5 rounded-xl overflow-hidden group bg-black/40">
                   <img
                     src="/images/products/solitaire-teardrop-halo-bracelet.webp"
                     alt="Pavitrani Solitaire Teardrop Halo Tennis Bracelet"
@@ -129,7 +146,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   />
                   
                   {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#30232E] via-transparent to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
 
                   {/* Watermark badge on card */}
                   <div className="absolute top-4 left-4 bg-[#47153F]/90 backdrop-blur-xs text-[#E8D8B7] text-[11px] font-medium px-3 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow">
@@ -152,7 +169,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                 </div>
 
                 {/* Secondary Pill */}
-                <div className="mt-3 px-3 py-2 bg-white/5 rounded-lg flex items-center justify-between text-xs text-[#FAF6EF]/85">
+                <div className="mt-3 px-3 py-2 bg-black/25 rounded-lg flex items-center justify-between text-xs text-[#FAF6EF]/85 border border-[#C9A24A]/20">
                   <span className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#C9A24A]" />
                     <span>A unit of Mayank Metal Works</span>
