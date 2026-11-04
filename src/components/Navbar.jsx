@@ -68,8 +68,8 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
       </div>
 
-      {/* 2. Main Luxury Navigation Bar (Warm Ivory with Gold Accent Border) */}
-      <nav className={`w-full transition-all duration-300 bg-[#FAF6EF] ${
+      {/* 2. Main Luxury Navigation Bar (Clean Luminous White with Gold Accent Border) */}
+      <nav className={`w-full transition-all duration-300 bg-white/95 backdrop-blur-md ${
         isScrolled 
           ? 'shadow-md py-2.5 border-b border-[#C9A24A]/40' 
           : 'py-3.5 border-b border-[#C9A24A]/25'
@@ -82,12 +82,12 @@ export default function Navbar({ activePage, setActivePage }) {
             className="flex items-center gap-3 sm:gap-3.5 text-left group focus:outline-none min-w-0 mr-3"
             aria-label="Pavitrani Jewellers Home"
           >
-            {/* Official Supplied Lotus Logo without background or circle */}
+            {/* Official Supplied Lotus Logo in authentic Royal Purple without any background or color filter */}
             <div className="relative flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
               <img 
                 src="/logo.png" 
                 alt="Pavitrani Jewellers Official Lotus Emblem" 
-                className="h-10 sm:h-12 md:h-13 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(201,162,74,0.4)] transition-all"
+                className="h-10 sm:h-12 md:h-13 w-auto object-contain transition-all"
                 loading="eager"
               />
             </div>
@@ -181,7 +181,7 @@ export default function Navbar({ activePage, setActivePage }) {
 
         {/* Mobile Slide-down Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF6EF] border-t border-[#C9A24A]/25 px-4 pt-4 pb-6 mt-2 space-y-3 shadow-xl animate-in slide-in-from-top duration-200">
+          <div className="lg:hidden bg-white border-t border-[#C9A24A]/25 px-4 pt-4 pb-6 mt-2 space-y-3 shadow-xl animate-in slide-in-from-top duration-200">
             <div className="space-y-1">
               {navLinks.map((link) => (
                 <button

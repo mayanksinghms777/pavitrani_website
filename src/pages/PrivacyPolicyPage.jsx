@@ -6,9 +6,11 @@ export default function PrivacyPolicyPage({ setActivePage }) {
   return (
     <div className="space-y-12">
       
-      {/* Header (Royal Plum - Flush under header with zero gap) */}
-      <section className="bg-[#44003B] text-[#FAF6EF] pt-14 pb-24 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Header (Official Logo Purple #44003B with Radiant Gradient to White) */}
+      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-28 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        {/* Soft Ambient Radial Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">

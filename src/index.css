@@ -12,7 +12,7 @@
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #FAF6EF;
+    background-color: #FFFFFF;
     color: #30232E;
     overflow-x: hidden;
     margin: 0;
@@ -32,6 +32,15 @@
 .bg-royal-plum { background-color: #44003B; }
 .text-royal-plum { color: #44003B; }
 .border-royal-plum { border-color: #44003B; }
+
+/* Gradient to White Utilities */
+.bg-plum-gradient-to-white {
+  background: linear-gradient(180deg, #44003B 0%, #44003B 55%, #550849 70%, #FFFFFF 100%);
+}
+
+.bg-plum-radial-glow {
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+}
 
 .bg-antique-gold { background-color: #C9A24A; }
 .text-antique-gold { color: #C9A24A; }

@@ -18,9 +18,11 @@ export default function ShowroomPage() {
   return (
     <div className="space-y-16 sm:space-y-24">
       
-      {/* 1. Header Banner (Royal Plum - Flush under header with zero gap) */}
-      <section className="bg-[#44003B] text-[#FAF6EF] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. Header Banner (Official Logo Purple #44003B with Radiant Gradient to White) */}
+      <section className="bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF6EF] pt-14 pb-32 sm:pb-36 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        {/* Soft Ambient Radial Sheen */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
@@ -41,7 +43,7 @@ export default function ShowroomPage() {
               href={BUSINESS_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-white text-[#44003B] hover:bg-[#FAF8F5] font-semibold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
             >
               <Navigation className="w-4 h-4 text-[#C9A24A]" />
               <span>Get Directions on Google Maps</span>

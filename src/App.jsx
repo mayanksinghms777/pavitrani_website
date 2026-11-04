@@ -57,7 +57,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF6EF] text-[#30232E] font-sans antialiased selection:bg-[#C9A24A]/25 selection:text-[#44003B]">
+    <div className="min-h-screen flex flex-col bg-white text-[#30232E] font-sans antialiased selection:bg-[#C9A24A]/25 selection:text-[#44003B]">
       {/* Sticky Main Navigation */}
       <Navbar 
         activePage={activePage} 
@@ -65,7 +65,7 @@ export default function App() {
       />
 
       {/* Main Page Content */}
-      <main className="flex-1 w-full bg-[#FAF6EF]">
+      <main className="flex-1 w-full bg-white">
         {activePage === 'home' && (
           <HomePage 
             setActivePage={setActivePage} 

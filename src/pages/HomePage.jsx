@@ -32,11 +32,12 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
   return (
     <div className="space-y-20 sm:space-y-28">
       
-      {/* 1. HERO SECTION (Royal Plum & Antique Gold) */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#44003B] text-[#FAF6EF] overflow-hidden">
-        {/* Subtle Warm Antique Gold Ambient Glow */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#C9A24A]/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#30232E]/40 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. HERO SECTION (Official Logo Purple #44003B with Radiant Luxury Gradient to White) */}
+      <section className="relative min-h-[88vh] flex items-center bg-gradient-to-b from-[#44003B] via-[#44003B] via-60% to-white text-[#FAF8F5] overflow-hidden pt-8 pb-24 sm:pb-32">
+        {/* Soft Ambient Radial Sheen from Top (Clean, true color without muddy shifts) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1)_0%,_transparent_65%)] pointer-events-none" />
+        {/* Seamless Soft Fade to White at Bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -48,13 +49,13 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
             </div>
 
             <div className="space-y-4">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#FAF8F5] leading-[1.1]">
-                Pavitrani <span className="text-[#E8D8B7]">Jewellers</span>
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+                Pavitrani <span className="bg-gradient-to-r from-white via-[#FAF6EF] to-[#E8D8B7] bg-clip-text text-transparent">Jewellers</span>
               </h1>
               <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#C9A24A] tracking-wide font-normal">
                 Jewels as Pure as You
               </p>
-              <p className="text-sm sm:text-base text-[#FAF6EF]/85 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
+              <p className="text-sm sm:text-base text-white/90 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed pt-1">
                 Step into <strong className="text-[#E8D8B7] font-medium">Pavitrani Jewellers</strong> on B.L.W Road, Varanasi. Experience handcrafted 925 sterling silver ornaments, hallmarked gold heirlooms, and certified lab-grown diamonds created with generations of metallurgical integrity.
               </p>
             </div>
@@ -67,7 +68,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'collections';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-7 py-3.5 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-md flex items-center gap-2"
+                className="px-7 py-3.5 rounded-full bg-white text-[#44003B] hover:bg-[#FAF8F5] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
               >
                 <span>Explore Collections</span>
                 <ChevronRight className="w-4 h-4 text-[#C9A24A]" />
@@ -89,7 +90,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                   window.location.hash = 'showroom';
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-[#FAF6EF] border border-[#C9A24A]/30 text-xs sm:text-sm tracking-wider transition-all"
+                className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 text-xs sm:text-sm tracking-wider transition-all"
               >
                 <span>Virtual Showroom</span>
               </button>
@@ -169,7 +170,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
       </section>
 
       {/* 2. VALUE PROPOSITIONS STRIP */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-16 relative z-20">
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {BUSINESS_INFO.pillars.map((pillar, idx) => (
             <div key={idx} className="flex items-start gap-4 p-2">
