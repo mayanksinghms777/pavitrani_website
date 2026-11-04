@@ -18,35 +18,35 @@ export default function AboutPage({ setActivePage }) {
     <div className="space-y-16 sm:space-y-24 bg-[#FAF6EF]">
       
       {/* 1. Header Hero (Warm Ivory Luxury Editorial Header) */}
-      <section className="bg-[#FAF6EF] text-[#30232E] pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/25 relative overflow-hidden text-center">
+      <section className="bg-[#FAF6EF] text-[#30232E] pt-10 pb-12 sm:pt-16 sm:pb-20 px-3 sm:px-6 lg:px-8 border-b border-[#C9A24A]/25 text-center relative overflow-hidden">
         {/* Subtle Luxury Ambient Sheen */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(201,162,74,0.15)_0%,transparent_65%)] pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center space-y-4 relative z-10">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C9A24A]/40 text-[#47153F] text-xs font-semibold uppercase tracking-widest shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C9A24A]/40 text-[#47153F] text-xs font-semibold uppercase tracking-widest shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>The Story of Pavitrani Jewellers</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#30232E] leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#30232E] leading-tight">
             Rooted in Varanasi's Heritage, <br />
             <span className="text-[#47153F] italic font-normal">Dedicated to Uncompromising Purity</span>
           </h1>
 
-          <p className="font-serif italic text-xl sm:text-2xl text-[#C9A24A] font-normal tracking-wide">
+          <p className="font-serif italic text-lg sm:text-2xl text-[#C9A24A] font-normal tracking-wide">
             “Jewels as Pure as You”
           </p>
 
-          <p className="text-base sm:text-lg text-[#30232E]/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+          <p className="text-sm sm:text-base text-[#30232E]/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
             "Jewels as Pure as You" is more than a slogan — it is our generational covenant with every patron who walks through our doors on B.L.W Road.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <span className="px-4 py-1.5 rounded-full bg-white text-xs font-medium text-[#47153F] border border-[#C9A24A]/30 shadow-xs">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+            <span className="px-3.5 py-1.5 rounded-full bg-white text-xs font-medium text-[#47153F] border border-[#C9A24A]/30 shadow-xs">
               A Unit of MAYANK METAL WORKS
             </span>
-            <span className="px-4 py-1.5 rounded-full bg-white text-xs font-medium text-[#30232E]/75 border border-[#C9A24A]/30 shadow-xs">
+            <span className="px-3.5 py-1.5 rounded-full bg-white text-xs font-medium text-[#30232E]/75 border border-[#C9A24A]/30 shadow-xs">
               GST: {BUSINESS_INFO.gstin}
             </span>
           </div>
@@ -55,8 +55,8 @@ export default function AboutPage({ setActivePage }) {
       </section>
 
       {/* 2. Brand Story & Origins */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 lg:p-16 shadow-luxury border border-[#C9A24A]/30 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-20">
+        <div className="bg-[#FFFFFF] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-16 shadow-luxury border border-[#C9A24A]/30 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">

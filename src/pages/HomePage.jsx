@@ -86,7 +86,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
 
               {/* Main Headline: Pavitrani Jewellers */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#30232E] font-bold leading-[1.1] tracking-tight">
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#47153F] font-bold leading-[1.1] tracking-tight">
                   Pavitrani <span className="text-[#47153F]">Jewellers</span>
                 </h1>
 
@@ -138,7 +138,7 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
 
             {/* Right Column: Hero Visual (Medium Proportioned Size - 5 cols) */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md">
+              <div className="relative w-full max-w-[340px] sm:max-w-[370px] mx-auto lg:mr-0">
                 
                 {/* Decorative Antique Gold Outer Halo */}
                 <div 
@@ -147,8 +147,8 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                 />
 
                 {/* Medium-Sized Framed Visual Card */}
-                <div className="relative rounded-2xl overflow-hidden bg-white p-2.5 sm:p-3 shadow-xl border border-[#C9A24A]/30">
-                  <div className="relative aspect-[4/5] max-h-[380px] sm:max-h-[420px] rounded-xl overflow-hidden group bg-[#2A1D27]">
+                <div className="relative rounded-2xl overflow-hidden bg-white p-3 shadow-xl border border-[#C9A24A]/30 w-full">
+                  <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden group bg-[#2A1D27]">
                     
                     {/* The striking hero jewellery photograph */}
                     <img
@@ -161,16 +161,16 @@ export default function HomePage({ setActivePage, onSelectProduct, setCollection
                     {/* Elegant vignette gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                    {/* Floating Luxury Tag on Image (Top Left) */}
-                    <div className="absolute top-3 left-3 bg-[#47153F]/90 backdrop-blur-md text-[#E8D8B7] text-[11px] font-semibold px-3 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow-md">
-                      <Sparkles className="w-3 h-3 text-[#C9A24A]" />
-                      <span>Signature Showroom Creation</span>
-                    </div>
-
-                    {/* Floating Brand Origin Badge (Top Right) */}
-                    <div className="hidden sm:flex absolute top-3 right-3 bg-white/90 backdrop-blur-md text-[#47153F] text-[10px] font-medium px-2.5 py-0.5 rounded-full border border-[#C9A24A]/30 shadow-sm items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-[#C9A24A]" />
-                      <span>Mayank Metal Works</span>
+                    {/* Top Badges Stack (Zero Overlap Guaranteed) */}
+                    <div className="absolute top-3 left-3 flex flex-col items-start gap-1.5 z-10 pointer-events-none">
+                      <div className="bg-[#47153F]/90 backdrop-blur-md text-[#E8D8B7] text-[10px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#C9A24A]/40 flex items-center gap-1.5 shadow-md">
+                        <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                        <span>Signature Showroom Creation</span>
+                      </div>
+                      <div className="bg-white/95 backdrop-blur-md text-[#47153F] text-[9px] sm:text-[10px] font-medium px-2 py-0.5 rounded-full border border-[#C9A24A]/30 shadow-xs flex items-center gap-1">
+                        <ShieldCheck className="w-3 h-3 text-[#C9A24A]" />
+                        <span>Mayank Metal Works</span>
+                      </div>
                     </div>
 
                     {/* Editorial Overlay Caption (Bottom) */}

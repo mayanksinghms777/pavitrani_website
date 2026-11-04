@@ -12,6 +12,11 @@
     --white: #FFFFFF;
   }
 
+  html, body, #root {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #FAF6EF;
@@ -19,6 +24,7 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   h1, h2, h3, h4, .font-serif {
