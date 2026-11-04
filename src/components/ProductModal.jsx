@@ -33,27 +33,27 @@ export default function ProductModal({ product, onClose }) {
       />
 
       {/* Modal Card */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#FAF8F5] rounded-2xl shadow-2xl border border-[#C5A059]/40 z-10 flex flex-col md:flex-row">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#FAF6EF] rounded-2xl shadow-2xl border border-[#C9A24A]/40 z-10 flex flex-col md:flex-row">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-[#2D0A27]/80 text-[#FAF8F5] hover:bg-[#2D0A27] hover:text-[#E0C17E] transition-all"
+          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-[#44003B] text-[#FAF6EF] hover:bg-[#30232E] hover:text-[#C9A24A] transition-all shadow-md"
           aria-label="Close product preview"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Left Side: Product Imagery & Zoom View */}
-        <div className="w-full md:w-1/2 p-6 bg-[#1A0417] flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-[#C5A059]/20">
-          <div className="relative w-full aspect-square max-w-sm rounded-xl overflow-hidden bg-black/30 border border-[#C5A059]/30 flex items-center justify-center p-2 group">
+        <div className="w-full md:w-1/2 p-6 bg-[#30232E] flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-[#C9A24A]/25">
+          <div className="relative w-full aspect-square max-w-sm rounded-xl overflow-hidden bg-black/30 border border-[#C9A24A]/30 flex items-center justify-center p-2 group">
             <img
               src={currentImgSrc}
               alt={product.title}
               className="w-full h-full object-contain filter drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-[#E0C17E] px-2.5 py-1 rounded text-xs flex items-center gap-1.5 border border-[#C5A059]/30">
-              <ZoomIn className="w-3.5 h-3.5" />
+            <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-xs text-[#E8D8B7] px-2.5 py-1 rounded text-xs flex items-center gap-1.5 border border-[#C9A24A]/30">
+              <ZoomIn className="w-3.5 h-3.5 text-[#C9A24A]" />
               <span>{activeImage === 'detail' ? 'Macro Focus' : 'Full Piece'}</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function ProductModal({ product, onClose }) {
                 onClick={() => setActiveImage('main')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   activeImage === 'main'
-                    ? 'bg-[#C5A059] text-[#1A0417] font-semibold shadow'
+                    ? 'bg-[#C9A24A] text-[#44003B] font-semibold shadow'
                     : 'bg-white/10 text-white/70 hover:bg-white/20'
                 }`}
               >
@@ -75,7 +75,7 @@ export default function ProductModal({ product, onClose }) {
                 onClick={() => setActiveImage('detail')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   activeImage === 'detail'
-                    ? 'bg-[#C5A059] text-[#1A0417] font-semibold shadow'
+                    ? 'bg-[#C9A24A] text-[#44003B] font-semibold shadow'
                     : 'bg-white/10 text-white/70 hover:bg-white/20'
                 }`}
               >
@@ -84,7 +84,7 @@ export default function ProductModal({ product, onClose }) {
             </div>
           )}
 
-          <p className="text-[11px] text-[#FAF8F5]/60 text-center mt-3 font-sans">
+          <p className="text-[11px] text-[#FAF6EF]/70 text-center mt-3 font-sans">
             Photographed directly from Pavitrani Jewellers showroom stock.
           </p>
         </div>
@@ -94,39 +94,39 @@ export default function ProductModal({ product, onClose }) {
           <div className="space-y-4">
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-[#2D0A27] text-[#E0C17E] border border-[#C5A059]/40">
+              <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-[#44003B] text-[#E8D8B7] border border-[#C9A24A]/40">
                 {product.category}
               </span>
-              <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#EFE9DF] text-[#7A5B1E] border border-[#C5A059]/30">
+              <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#E8D8B7]/40 text-[#44003B] border border-[#C9A24A]/30">
                 {product.badge}
               </span>
               {product.tag && (
-                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200">
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#C9A24A] text-[#44003B] font-bold">
                   {product.tag}
                 </span>
               )}
             </div>
 
             {/* Title */}
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#2D0A27] leading-snug">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#44003B] leading-snug">
               {product.title}
             </h2>
 
             {/* Description */}
-            <p className="text-sm text-gray-700 leading-relaxed font-sans">
+            <p className="text-sm text-[#30232E]/80 leading-relaxed font-sans">
               {product.description}
             </p>
 
             {/* Craftsmanship Highlights */}
             {product.highlights && product.highlights.length > 0 && (
               <div className="space-y-2 pt-2">
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#8B6722]">
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#C9A24A]">
                   Craftsmanship & Hallmarks
                 </h4>
-                <ul className="grid grid-cols-1 gap-2 text-xs text-gray-700">
+                <ul className="grid grid-cols-1 gap-2 text-xs text-[#30232E]/85">
                   {product.highlights.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -135,24 +135,24 @@ export default function ProductModal({ product, onClose }) {
             )}
 
             {/* Transparent Note regarding prices & metal weight */}
-            <div className="p-3.5 rounded-xl bg-[#F7F3EC] border border-[#C5A059]/30 text-xs text-gray-700 space-y-1">
-              <div className="flex items-center gap-1.5 font-semibold text-[#2D0A27]">
-                <ShieldCheck className="w-4 h-4 text-[#C5A059]" />
+            <div className="p-3.5 rounded-xl bg-white border border-[#C9A24A]/30 text-xs text-[#30232E]/80 space-y-1 shadow-xs">
+              <div className="flex items-center gap-1.5 font-semibold text-[#44003B]">
+                <ShieldCheck className="w-4 h-4 text-[#C9A24A]" />
                 <span>Transparent Showroom Pricing</span>
               </div>
-              <p className="text-[11px] text-gray-600 leading-normal">
+              <p className="text-[11px] text-[#30232E]/70 leading-normal">
                 Final price and weight vary according to custom sizing, live bullion gold/silver market rates, and exact piece weight. Please enquire below for instant live availability and exact quote.
               </p>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="space-y-3 pt-2 border-t border-gray-200">
+          <div className="space-y-3 pt-2 border-t border-[#C9A24A]/20">
             <a
               href={`https://wa.me/91${BUSINESS_INFO.whatsapp}?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-600 text-white font-medium text-sm shadow-md hover:shadow-lg transition-all"
+              className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm shadow-md hover:shadow-lg transition-all"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Enquire for this Piece on WhatsApp</span>
@@ -161,9 +161,9 @@ export default function ProductModal({ product, onClose }) {
             <div className="flex items-center gap-3">
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#2D0A27] hover:bg-[#3E0E35] text-[#FAF8F5] text-xs font-semibold tracking-wider transition-all"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#44003B] hover:bg-[#30232E] text-[#FAF6EF] text-xs font-semibold tracking-wider transition-all shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#C5A059]" />
+                <Phone className="w-4 h-4 text-[#C9A24A]" />
                 <span>Call Showroom</span>
               </a>
 

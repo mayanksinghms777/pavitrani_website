@@ -16,13 +16,15 @@ import { BUSINESS_INFO, SHOWROOM_GALLERY } from '../data/business';
 
 export default function ShowroomPage() {
   return (
-    <div className="space-y-16 sm:space-y-24 py-8">
+    <div className="space-y-16 sm:space-y-24">
       
-      {/* 1. Header Banner */}
-      <section className="bg-gradient-to-b from-[#2D0A27] via-[#22051E] to-[#FAF8F5] text-[#FAF8F5] pt-12 pb-24 px-4 sm:px-6 lg:px-8 border-b border-[#C5A059]/20 text-center relative overflow-hidden">
+      {/* 1. Header Banner (Royal Plum - Flush under header with zero gap) */}
+      <section className="bg-[#44003B] text-[#FAF6EF] pt-14 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
+
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C5A059]/40 text-[#E0C17E] text-xs font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>81/1 Shivdaspur B.L.W Road, Varanasi</span>
           </div>
 
@@ -30,7 +32,7 @@ export default function ShowroomPage() {
             The Pavitrani Showroom Experience
           </h1>
 
-          <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+          <p className="text-base sm:text-lg text-[#FAF6EF]/85 max-w-2xl mx-auto font-light leading-relaxed font-sans">
             Step into a world where sacred Varanasi tradition meets modern luxury. Designed for leisurely family consultations and transparent transactions.
           </p>
 
@@ -39,17 +41,17 @@ export default function ShowroomPage() {
               href={BUSINESS_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#DFBE7B] via-[#C5A059] to-[#9E7D36] text-[#1A0417] font-semibold text-xs uppercase tracking-wider shadow hover:brightness-110 transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center gap-2"
             >
-              <Navigation className="w-4 h-4" />
+              <Navigation className="w-4 h-4 text-[#C9A24A]" />
               <span>Get Directions on Google Maps</span>
             </a>
 
             <a
               href={`tel:+91${BUSINESS_INFO.phone}`}
-              className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium text-xs tracking-wider transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 text-[#FAF6EF] border border-[#C9A24A]/40 font-medium text-xs tracking-wider transition-all flex items-center gap-2"
             >
-              <Phone className="w-4 h-4 text-[#C5A059]" />
+              <Phone className="w-4 h-4 text-[#C9A24A]" />
               <span>Call: {BUSINESS_INFO.phoneDisplay}</span>
             </a>
           </div>
@@ -59,92 +61,92 @@ export default function ShowroomPage() {
       {/* 2. Visual Tour: 4 Detailed Showroom Photo Sections */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 space-y-16">
         
-        {/* Photo 1: Illuminated Facade */}
-        <div className="bg-white rounded-3xl overflow-hidden shadow-luxury border border-[#C5A059]/30 grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-7 aspect-16/10 relative overflow-hidden bg-black/40">
+        {/* Photo 1: Illuminated Night Facade */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden aspect-16/10 shadow-md relative group">
             <img
               src="/images/showroom/pavitrani-showroom-facade-night.webp"
-              alt="Pavitrani Jewellers Storefront Night Facade Varanasi"
-              className="w-full h-full object-cover"
+              alt="Pavitrani Jewellers Night Facade on BLW Road Varanasi"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <div className="lg:col-span-5 p-8 sm:p-10 space-y-4 text-left">
-            <span className="text-xs font-semibold text-[#8B6722] uppercase tracking-wider">
-              Landmark Storefront
-            </span>
-            <h2 className="font-serif text-3xl font-bold text-[#2D0A27]">
-              Grand Illuminated Elevation
+          <div className="lg:col-span-5 space-y-4 text-left">
+            <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
+              Exterior Architecture
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+              Grand Illuminated Facade on B.L.W Road
             </h2>
-            <p className="text-sm text-gray-700 leading-relaxed font-sans">
-              Our striking multi-tiered glass showroom lights up the B.L.W Road in Shivdaspur. Decorated with festive illuminations and displaying our illuminated brand lotus insignia, it welcomes patrons into an ambience of regal elegance.
+            <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
+              Centrally situated in Shivdaspur near the historic Kabir Ashram, our contemporary multistory showroom stands as an illuminated beacon of hallmark purity in Varanasi.
             </p>
-            <div className="pt-2 text-xs text-gray-500 font-sans space-y-1.5">
+            <div className="space-y-2 pt-2 text-xs text-[#30232E]/70 font-sans">
               <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#C5A059]" />
-                <span>Near Kabir Ashram, Shivdaspur, Varanasi</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A]" />
+                <span>Prime roadside location with dedicated client parking</span>
               </p>
               <p className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#C5A059]" />
-                <span>Open All 7 Days: 10:30 AM to 8:30 PM</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A]" />
+                <span>Easily accessible from BLW Colony, Manduadih & Cantt</span>
               </p>
             </div>
           </div>
         </div>
 
-        {/* Photo 2: Royal Purple Salon */}
-        <div className="bg-white rounded-3xl overflow-hidden shadow-luxury border border-[#C5A059]/30 grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-5 p-8 sm:p-10 space-y-4 text-left order-2 lg:order-1">
-            <span className="text-xs font-semibold text-[#8B6722] uppercase tracking-wider">
-              VIP Customer Salon
-            </span>
-            <h2 className="font-serif text-3xl font-bold text-[#2D0A27]">
-              Plush Velvet Hospitality
+        {/* Photo 2: Luxury Royal Velvet VIP Lounge */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-5 space-y-4 text-left order-2 lg:order-1">
+            <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
+              Private Hospitality
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+              Plush Royal Purple VIP Consultation Lounge
             </h2>
-            <p className="text-sm text-gray-700 leading-relaxed font-sans">
-              We believe jewellery shopping should never feel rushed. Settle into our plush royal purple high-back velvet armchairs while our trained consultants present pieces tailored to your personal aesthetic, wedding dates, or gifting needs.
+            <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
+              Selecting bridal heirlooms, bridal necklaces, or auspicious silver puja sets demands time and contemplation. Relax in our private VIP salon while viewing pieces under true-spectrum jewellery lighting.
             </p>
-            <div className="pt-2 grid grid-cols-2 gap-3 text-xs text-gray-700">
-              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-gray-200">
-                <p className="font-semibold text-[#2D0A27]">Private Consultation</p>
-                <p className="text-[11px] text-gray-500 mt-0.5">Quiet VIP viewing for bridal families</p>
+            <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
+              <div className="p-3 bg-[#FAF6EF] rounded-xl border border-[#C9A24A]/20">
+                <p className="font-semibold text-[#44003B]">Private Consultation</p>
+                <p className="text-[11px] text-gray-500 mt-0.5">One-on-one specialist</p>
               </div>
-              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-gray-200">
-                <p className="font-semibold text-[#2D0A27]">Warm Hospitality</p>
-                <p className="text-[11px] text-gray-500 mt-0.5">Traditional refreshments & comfort</p>
+              <div className="p-3 bg-[#FAF6EF] rounded-xl border border-[#C9A24A]/20">
+                <p className="font-semibold text-[#44003B]">Warm Hospitality</p>
+                <p className="text-[11px] text-gray-500 mt-0.5">Complimentary tea & water</p>
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 aspect-16/10 relative overflow-hidden bg-black/40 order-1 lg:order-2">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden aspect-16/10 shadow-md relative group order-1 lg:order-2">
             <img
               src="/images/showroom/pavitrani-showroom-interior-luxury.webp"
-              alt="Pavitrani Jewellers VIP Lounge Purple Velvet Chairs"
-              className="w-full h-full object-cover"
+              alt="Pavitrani VIP Lounge Interior with Velvet Seating"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
         </div>
 
-        {/* Photo 3: Silverware & Showcase Alcoves */}
-        <div className="bg-white rounded-3xl overflow-hidden shadow-luxury border border-[#C5A059]/30 grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-7 aspect-16/10 relative overflow-hidden bg-black/40">
+        {/* Photo 3: Silverware Displays & Counters */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-luxury border border-[#C9A24A]/25 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden aspect-16/10 shadow-md relative group">
             <img
               src="/images/showroom/pavitrani-showroom-interior-counters.webp"
-              alt="Pavitrani Jewellers Silverware and Jewellery Showcase Galleries"
-              className="w-full h-full object-cover"
+              alt="Pavitrani Curated Silverware and Gold Jewellery Counters"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <div className="lg:col-span-5 p-8 sm:p-10 space-y-4 text-left">
-            <span className="text-xs font-semibold text-[#8B6722] uppercase tracking-wider">
-              Display Galleries
-            </span>
-            <h2 className="font-serif text-3xl font-bold text-[#2D0A27]">
-              Pure Silver Utensils & Gold Heirlooms
+          <div className="lg:col-span-5 space-y-4 text-left">
+            <div className="inline-block px-3 py-1 rounded-full bg-[#FAF6EF] text-[#C9A24A] text-xs font-semibold uppercase tracking-wider border border-[#C9A24A]/30">
+              Curated Displays
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
+              Comprehensive Silverware & Gold Alcoves
             </h2>
-            <p className="text-sm text-gray-700 leading-relaxed font-sans">
-              Our illuminated showcase alcoves house Varanasi's most comprehensive collection of pure silver dinnerware, wedding pooja samagri, decorative silverware, silver Mayur sculptures, and fine gold trousseau sets.
+            <p className="text-xs sm:text-sm text-[#30232E]/80 leading-relaxed font-sans">
+              Our display galleries present an extensive inventory of certified 925 sterling silver bracelets, traditional silver utensils, heavy wedding payals, and certified diamond rings.
             </p>
-            <div className="p-4 rounded-xl bg-[#2D0A27] text-white space-y-1 text-xs">
-              <p className="text-[#E0C17E] font-semibold">Live Precision Weighing</p>
-              <p className="text-white/80">Every piece is verified in front of you on certified precision scales with zero ambiguity.</p>
+            <div className="p-4 rounded-xl bg-[#44003B] text-white space-y-1 text-xs">
+              <p className="font-semibold text-[#E8D8B7]">Live Precision Weighing</p>
+              <p className="text-white/80">Every piece weighed right before you on electronic digital scales with zero approximation.</p>
             </div>
           </div>
         </div>
@@ -153,56 +155,56 @@ export default function ShowroomPage() {
 
       {/* 3. In-Store Amenities */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-12 border border-[#C5A059]/30 space-y-8">
+        <div className="bg-[#FAF6EF] rounded-3xl p-8 sm:p-12 border border-[#C9A24A]/30 space-y-8">
           <div className="text-center space-y-2 max-w-xl mx-auto">
-            <span className="text-xs font-semibold text-[#8B6722] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
               Patron Comfort
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#2D0A27]">
+            <h2 className="font-serif text-3xl font-bold text-[#44003B]">
               Showroom Amenities & Facilities
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-2 text-left">
-              <Car className="w-6 h-6 text-[#C5A059]" />
-              <h4 className="font-serif text-base font-bold text-[#2D0A27]">Convenient Parking</h4>
-              <p className="text-xs text-gray-600 font-sans">Ample parking space available for cars and two-wheelers right at our storefront on BLW Road.</p>
+            <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
+              <Car className="w-6 h-6 text-[#C9A24A]" />
+              <h4 className="font-serif text-base font-bold text-[#44003B]">Convenient Parking</h4>
+              <p className="text-xs text-[#30232E]/75 font-sans">Ample parking space available for cars and two-wheelers right at our storefront on BLW Road.</p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-2 text-left">
-              <Scale className="w-6 h-6 text-[#C5A059]" />
-              <h4 className="font-serif text-base font-bold text-[#2D0A27]">Precision Weighing</h4>
-              <p className="text-xs text-gray-600 font-sans">Govt-certified electronic balances ensuring absolute transparency down to milligram accuracy.</p>
+            <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
+              <Scale className="w-6 h-6 text-[#C9A24A]" />
+              <h4 className="font-serif text-base font-bold text-[#44003B]">Precision Weighing</h4>
+              <p className="text-xs text-[#30232E]/75 font-sans">Govt-certified electronic balances ensuring absolute transparency down to milligram accuracy.</p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-2 text-left">
-              <Coffee className="w-6 h-6 text-[#C5A059]" />
-              <h4 className="font-serif text-base font-bold text-[#2D0A27]">Varanasi Hospitality</h4>
-              <p className="text-xs text-gray-600 font-sans">Warm Banarasi courtesy, comfortable seating, and refreshments for the whole family.</p>
+            <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
+              <Coffee className="w-6 h-6 text-[#C9A24A]" />
+              <h4 className="font-serif text-base font-bold text-[#44003B]">Varanasi Hospitality</h4>
+              <p className="text-xs text-[#30232E]/75 font-sans">Warm Banarasi courtesy, comfortable seating, and refreshments for the whole family.</p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-2 text-left">
-              <Award className="w-6 h-6 text-[#C5A059]" />
-              <h4 className="font-serif text-base font-bold text-[#2D0A27]">Instant GST Invoicing</h4>
-              <p className="text-xs text-gray-600 font-sans">Official computerized tax invoices with GSTIN: 09AUQPS8232E2Z3 for all purchases.</p>
+            <div className="bg-white p-5 rounded-2xl shadow-luxury border border-[#C9A24A]/20 space-y-2 text-left">
+              <Award className="w-6 h-6 text-[#C9A24A]" />
+              <h4 className="font-serif text-base font-bold text-[#44003B]">Instant GST Invoicing</h4>
+              <p className="text-xs text-[#30232E]/75 font-sans">Official computerized tax invoices with GSTIN: 09AUQPS8232E2Z3 for all purchases.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 4. Map & Directions Embed */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 pb-12">
         <div className="text-center space-y-2">
-          <span className="text-xs font-semibold text-[#8B6722] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[#C9A24A] uppercase tracking-wider">
             Interactive Map
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#2D0A27]">
+          <h2 className="font-serif text-3xl font-bold text-[#44003B]">
             Find Us on B.L.W Road, Varanasi
           </h2>
         </div>
 
-        <div className="bg-white rounded-3xl overflow-hidden shadow-luxury border border-[#C5A059]/30">
+        <div className="bg-white rounded-3xl overflow-hidden shadow-luxury border border-[#C9A24A]/30">
           <div className="aspect-21/9 w-full min-h-[350px] relative bg-gray-100">
             <iframe
               title="Pavitrani Jewellers Varanasi Showroom Location"
@@ -217,9 +219,9 @@ export default function ShowroomPage() {
             />
           </div>
 
-          <div className="p-6 bg-[#2D0A27] text-white flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="p-6 bg-[#44003B] text-white flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-center md:text-left">
-              <p className="font-serif text-lg font-bold text-[#E0C17E]">Pavitrani Jewellers</p>
+              <p className="font-serif text-lg font-bold text-[#E8D8B7]">Pavitrani Jewellers</p>
               <p className="text-xs text-white/80">81/1 Shivdaspur B.L.W Road Near Kabir Ashram, Varanasi, U.P.</p>
             </div>
 
@@ -228,9 +230,9 @@ export default function ShowroomPage() {
                 href={BUSINESS_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#DFBE7B] via-[#C5A059] to-[#9E7D36] text-[#1A0417] text-xs font-semibold tracking-wider uppercase hover:brightness-110 transition-all flex items-center gap-1.5"
+                className="px-5 py-2.5 rounded-full bg-[#FAF6EF] text-[#44003B] hover:bg-[#E8D8B7] text-xs font-semibold tracking-wider uppercase transition-all flex items-center gap-1.5 shadow-sm"
               >
-                <Navigation className="w-3.5 h-3.5" />
+                <Navigation className="w-3.5 h-3.5 text-[#C9A24A]" />
                 <span>Open in Maps</span>
               </a>
 
@@ -238,7 +240,7 @@ export default function ShowroomPage() {
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium tracking-wider transition-all flex items-center gap-1.5"
+                className="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp Us</span>

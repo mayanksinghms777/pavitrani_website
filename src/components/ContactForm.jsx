@@ -96,19 +96,19 @@ export default function ContactForm({ defaultInterest = "" }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-luxury border border-[#C5A059]/30 p-6 sm:p-8">
+    <div className="bg-white rounded-2xl shadow-luxury border border-[#C9A24A]/25 p-6 sm:p-8">
       {submitted ? (
         <div className="py-8 text-center space-y-5 animate-in fade-in duration-300">
-          <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-            <CheckCircle2 className="w-10 h-10" />
+          <div className="w-16 h-16 bg-[#FAF6EF] text-[#44003B] rounded-full flex items-center justify-center mx-auto border border-[#C9A24A]/30">
+            <CheckCircle2 className="w-10 h-10 text-[#C9A24A]" />
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-serif text-2xl font-bold text-[#2D0A27]">
+            <h3 className="font-serif text-2xl font-bold text-[#44003B]">
               Enquiry Received with Reverence!
             </h3>
-            <p className="text-sm text-gray-600 max-w-md mx-auto">
-              Thank you, <strong className="text-gray-900">{formData.name}</strong>. Our jewellery advisors at Pavitrani Jewellers Varanasi will get in touch with you shortly on <strong className="text-gray-900">{formData.phone}</strong>.
+            <p className="text-sm text-[#30232E]/80 max-w-md mx-auto">
+              Thank you, <strong className="text-[#44003B]">{formData.name}</strong>. Our jewellery advisors at Pavitrani Jewellers Varanasi will get in touch with you shortly on <strong className="text-[#44003B]">{formData.phone}</strong>.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function ContactForm({ defaultInterest = "" }) {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold tracking-wide transition-all shadow"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold tracking-wide transition-all shadow-sm"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Connect on WhatsApp Now</span>
@@ -137,14 +137,14 @@ export default function ContactForm({ defaultInterest = "" }) {
                   botField: ''
                 });
               }}
-              className="text-xs text-gray-500 hover:text-gray-900 underline"
+              className="text-xs text-[#30232E]/70 hover:text-[#44003B] underline"
             >
               Send Another Enquiry
             </button>
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 text-left">
+        <form onSubmit={handleSubmit} className="space-y-4 text-left font-sans">
           {/* Honeypot anti-spam trap field (hidden from human users) */}
           <div className="hidden" aria-hidden="true">
             <input
@@ -158,7 +158,7 @@ export default function ContactForm({ defaultInterest = "" }) {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30232E] mb-1">
               Your Full Name <span className="text-rose-500">*</span>
             </label>
             <input
@@ -170,8 +170,8 @@ export default function ContactForm({ defaultInterest = "" }) {
                 setFormData({ ...formData, name: e.target.value });
                 if (errors.name) setErrors({ ...errors, name: null });
               }}
-              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C5A059]/40 ${
-                errors.name ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C5A059]'
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C9A24A]/25 ${
+                errors.name ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C9A24A]'
               }`}
             />
             {errors.name && (
@@ -183,7 +183,7 @@ export default function ContactForm({ defaultInterest = "" }) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30232E] mb-1">
                 Phone Number (WhatsApp) <span className="text-rose-500">*</span>
               </label>
               <div className="relative">
@@ -199,8 +199,8 @@ export default function ContactForm({ defaultInterest = "" }) {
                     setFormData({ ...formData, phone: e.target.value });
                     if (errors.phone) setErrors({ ...errors, phone: null });
                   }}
-                  className={`w-full pl-11 pr-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C5A059]/40 ${
-                    errors.phone ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C5A059]'
+                  className={`w-full pl-11 pr-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C9A24A]/25 ${
+                    errors.phone ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C9A24A]'
                   }`}
                 />
               </div>
@@ -212,7 +212,7 @@ export default function ContactForm({ defaultInterest = "" }) {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30232E] mb-1">
                 Email Address <span className="text-gray-400 text-[10px] font-normal">(Optional)</span>
               </label>
               <input
@@ -223,8 +223,8 @@ export default function ContactForm({ defaultInterest = "" }) {
                   setFormData({ ...formData, email: e.target.value });
                   if (errors.email) setErrors({ ...errors, email: null });
                 }}
-                className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C5A059]/40 ${
-                  errors.email ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C5A059]'
+                className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C9A24A]/25 ${
+                  errors.email ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C9A24A]'
                 }`}
               />
               {errors.email && (
@@ -236,13 +236,13 @@ export default function ContactForm({ defaultInterest = "" }) {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30232E] mb-1">
               Collection of Interest
             </label>
             <select
               value={formData.interest}
               onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm transition-all outline-none focus:border-[#C5A059] focus:ring-2 focus:ring-[#C5A059]/40 bg-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm transition-all outline-none focus:border-[#C9A24A] focus:ring-2 focus:ring-[#C9A24A]/25 bg-white text-[#30232E]"
             >
               {interestOptions.map((opt) => (
                 <option key={opt} value={opt}>
@@ -253,7 +253,7 @@ export default function ContactForm({ defaultInterest = "" }) {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30232E] mb-1">
               Your Message or Custom Request <span className="text-rose-500">*</span>
             </label>
             <textarea
@@ -265,8 +265,8 @@ export default function ContactForm({ defaultInterest = "" }) {
                 setFormData({ ...formData, message: e.target.value });
                 if (errors.message) setErrors({ ...errors, message: null });
               }}
-              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C5A059]/40 ${
-                errors.message ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C5A059]'
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all outline-none focus:ring-2 focus:ring-[#C9A24A]/25 ${
+                errors.message ? 'border-rose-400 bg-rose-50/30' : 'border-gray-300 focus:border-[#C9A24A]'
               }`}
             />
             {errors.message && (
@@ -280,16 +280,16 @@ export default function ContactForm({ defaultInterest = "" }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-gradient-to-r from-[#DFBE7B] via-[#C5A059] to-[#9E7D36] text-[#1A0417] font-semibold text-xs uppercase tracking-wider shadow hover:shadow-lg hover:brightness-105 transition-all disabled:opacity-60"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#44003B] hover:bg-[#30232E] text-[#FAF6EF] font-semibold text-xs uppercase tracking-wider shadow-sm transition-all disabled:opacity-60"
             >
-              <Send className="w-4 h-4" />
+              <Send className="w-4 h-4 text-[#C9A24A]" />
               <span>{isSubmitting ? 'Submitting...' : 'Submit Enquiry'}</span>
             </button>
 
             <button
               type="button"
               onClick={sendDirectToWhatsApp}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs tracking-wider transition-all shadow"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs tracking-wider transition-all shadow-sm"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Send via WhatsApp</span>
@@ -298,7 +298,7 @@ export default function ContactForm({ defaultInterest = "" }) {
 
           <p className="text-[11px] text-gray-500 text-center font-sans">
             🔒 Your contact details are securely protected in accordance with our{' '}
-            <span className="text-[#8B6722] underline cursor-pointer">Privacy Policy</span>. We never spam.
+            <span className="text-[#44003B] font-semibold underline cursor-pointer">Privacy Policy</span>. We never spam.
           </p>
         </form>
       )}

@@ -237,3 +237,6 @@ export const CATEGORIES = [
   "Fine Gold",
   "Lab-Grown Diamonds"
 ];
+
+export const FEATURED_PRODUCT_IDS = PRODUCTS.filter((p) => p.featured).map((p) => p.id);
+

@@ -27,12 +27,12 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
   };
 
   return (
-    <footer className="bg-[#180415] text-[#FAF8F5] pt-16 pb-8 border-t-2 border-[#C5A059]/40 relative overflow-hidden">
-      {/* Decorative Gold Glow in Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-24 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
+    <footer className="bg-[#44003B] text-[#FAF6EF] pt-16 pb-8 border-t border-[#C9A24A]/40 relative overflow-hidden">
+      {/* Decorative Subtle Antique Gold Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-28 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#C5A059]/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#C9A24A]/25">
           
           {/* Col 1: Brand & Identity */}
           <div className="space-y-4">
@@ -41,35 +41,35 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 <img 
                   src="/logo.png" 
                   alt="Pavitrani Jewellers Official Lotus Emblem" 
-                  className="h-12 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(224,193,126,0.65)]"
+                  className="h-11 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(201,162,74,0.4)]"
                 />
               </div>
               <div>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-serif text-xl font-bold tracking-wider text-[#FAF8F5]">
+                  <span className="font-serif text-xl font-bold tracking-wider text-[#FAF6EF]">
                     PAVITRANI
                   </span>
-                  <span className="font-serif text-xl font-bold tracking-wider text-[#E0C17E]">
+                  <span className="font-serif text-xl font-bold tracking-wider text-[#E8D8B7]">
                     JEWELLERS
                   </span>
                 </div>
-                <p className="text-[10px] uppercase tracking-widest text-[#FAF8F5]/70 font-sans pt-0.5">
+                <p className="text-[10px] uppercase tracking-widest text-[#FAF6EF]/75 font-sans pt-0.5">
                   A unit of Mayank Metal Works
                 </p>
               </div>
             </div>
 
-            <p className="text-sm font-serif italic text-[#E0C17E] tracking-wide">
+            <p className="text-sm font-serif italic text-[#C9A24A] tracking-wide">
               "Jewels as Pure as You"
             </p>
 
-            <p className="text-xs text-[#FAF8F5]/70 leading-relaxed font-sans">
+            <p className="text-xs text-[#FAF6EF]/80 leading-relaxed font-sans">
               A premier jewellery showroom in Varanasi dedicated to authentic 925 sterling silver, hallmarked gold, and certified lab-grown diamond creations. Generational trust rooted in ethical metallurgy.
             </p>
 
             <div className="pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2D0A27] border border-[#C5A059]/40 text-[11px] text-[#E0C17E]">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#30232E] border border-[#C9A24A]/40 text-[11px] text-[#E8D8B7]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#C9A24A]" />
                 <span>A unit of MAYANK METAL WORKS</span>
               </span>
             </div>
@@ -84,7 +84,7 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 aria-label="Pavitrani Jewellers Instagram Profile"
                 title="Follow Pavitrani Jewellers on Instagram"
               >
-                <div className="w-full h-full bg-[#180415] rounded-full flex items-center justify-center hover:bg-transparent transition-colors">
+                <div className="w-full h-full bg-[#44003B] rounded-full flex items-center justify-center hover:bg-transparent transition-colors">
                   <InstagramIcon className="w-4 h-4 text-white" />
                 </div>
               </a>
@@ -102,7 +102,7 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
 
               <a
                 href={`tel:+91${BUSINESS_INFO.phone}`}
-                className="w-9 h-9 rounded-full bg-[#C5A059] flex items-center justify-center hover:bg-[#E0C17E] hover:scale-110 transition-all text-[#180415] shadow"
+                className="w-9 h-9 rounded-full bg-[#C9A24A] flex items-center justify-center hover:bg-[#E8D8B7] hover:scale-110 transition-all text-[#44003B] shadow"
                 aria-label="Call Showroom"
                 title="Call showroom directly"
               >
@@ -120,223 +120,226 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Navigation Links */}
           <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold text-[#E0C17E] tracking-wider border-b border-[#C5A059]/30 pb-2">
-              Quick Navigation
+            <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
+              Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm text-[#FAF8F5]/80">
+            <ul className="space-y-2.5 text-xs text-[#FAF6EF]/80 font-sans">
               <li>
                 <button 
                   onClick={() => handleNav('home')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Home
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Home</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('about')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> About Our Heritage
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>About Us & Heritage</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('collections')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Jewellery Collections
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Jewellery Collections</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('showroom')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Virtual Showroom Tour
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Virtual Showroom Tour</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('contact')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Showroom Location & Contact
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Contact & Showroom Location</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('disclaimer')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left text-xs text-[#FAF8F5]/60"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Product Disclaimer
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Product & Pricing Disclaimer</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => handleNav('privacy')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left text-xs text-[#FAF8F5]/60"
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <span className="text-[#C5A059]">›</span> Privacy Policy
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A24A] group-hover:scale-125 transition-transform" />
+                  <span>Privacy Policy</span>
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Signature Categories */}
+          {/* Col 3: Collections Categories */}
           <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold text-[#E0C17E] tracking-wider border-b border-[#C5A059]/30 pb-2">
-              Featured Categories
+            <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
+              Featured Collections
             </h4>
-            <ul className="space-y-2.5 text-sm text-[#FAF8F5]/80">
+            <ul className="space-y-2.5 text-xs text-[#FAF6EF]/80 font-sans">
               <li>
                 <button 
-                  onClick={() => handleNav('collections', '925 Silver')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  onClick={() => handleNav('collections', 'Silver Bracelets')}
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>925 Sterling Silver Jewellery</span>
+                  <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                  <span>925 Sterling Silver Bracelets</span>
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => handleNav('collections', 'Bracelets & Chains')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  onClick={() => handleNav('collections', 'Silverware & Artifacts')}
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Luxury Bracelets & Chains</span>
+                  <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                  <span>Pure Silver Idols & Showpieces</span>
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => handleNav('collections', 'Silverware & Artefacts')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  onClick={() => handleNav('collections', 'Gold Jewellery')}
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Pure Silver Utensils & Peacock Artefacts</span>
+                  <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                  <span>Hallmarked Gold Jewellery</span>
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => handleNav('collections', 'Fine Gold')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  onClick={() => handleNav('collections', 'Diamond Jewellery')}
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Hallmarked Fine Gold & Bridal Trousseau</span>
+                  <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                  <span>Certified Lab-Grown Solitaires</span>
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => handleNav('collections', 'Lab-Grown Diamonds')} 
-                  className="hover:text-[#E0C17E] transition-colors flex items-center gap-1.5 text-left"
+                  onClick={() => handleNav('collections', 'Bridal & Heirlooms')}
+                  className="hover:text-[#E8D8B7] transition-colors flex items-center gap-2 group text-left"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Certified Lab-Grown Diamonds</span>
+                  <Sparkles className="w-3 h-3 text-[#C9A24A]" />
+                  <span>Bridal Ornaments & Heirlooms</span>
                 </button>
               </li>
             </ul>
 
-            <div className="pt-2 text-xs text-[#FAF8F5]/60 bg-white/5 p-3 rounded-lg border border-[#C5A059]/20">
-              <p className="font-semibold text-[#E0C17E] mb-1">Showroom Consultation</p>
-              <p>Experience our private viewing salon on B.L.W Road. Walk-ins and appointments welcomed.</p>
+            <div className="pt-2">
+              <a
+                href={BUSINESS_INFO.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-600/30 text-emerald-200 border border-emerald-500/40 text-[11px] font-medium hover:bg-emerald-600 hover:text-white transition-all"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Custom Order on WhatsApp</span>
+              </a>
             </div>
           </div>
 
-          {/* Col 4: Showroom Information */}
+          {/* Col 4: Showroom Address & Timings */}
           <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold text-[#E0C17E] tracking-wider border-b border-[#C5A059]/30 pb-2">
-              Varanasi Showroom
+            <h4 className="font-serif text-lg font-semibold tracking-wider text-[#E8D8B7] border-b border-[#C9A24A]/25 pb-2">
+              Visit Showroom
             </h4>
-
-            <div className="space-y-3 text-xs text-[#FAF8F5]/85">
+            <div className="space-y-3 text-xs text-[#FAF6EF]/85 font-sans">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium text-white">Pavitrani Jewellers</p>
-                  <p>81/1 Shivdaspur, B.L.W Road</p>
-                  <p>Near Kabir Ashram, Varanasi, U.P. 221004</p>
-                  <a
+                  <p className="font-medium text-white">{BUSINESS_INFO.name}</p>
+                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address.street}</p>
+                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} {BUSINESS_INFO.address.pincode}</p>
+                  <a 
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-[#E0C17E] hover:underline font-medium mt-1"
+                    className="text-[#E8D8B7] hover:underline text-[11px] inline-block mt-1"
                   >
-                    Get Directions on Google Maps ›
+                    Open Google Maps &rarr;
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#C5A059] shrink-0" />
+              <div className="flex items-start gap-2.5">
+                <Clock className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <p>Primary: <a href={`tel:+91${BUSINESS_INFO.phone}`} className="hover:text-[#E0C17E] font-medium">{BUSINESS_INFO.phoneDisplay}</a></p>
-                  <p>Showroom: <a href={`tel:+91${BUSINESS_INFO.phoneSecondary}`} className="hover:text-[#E0C17E]">{BUSINESS_INFO.phoneSecondaryDisplay}</a></p>
+                  <p className="font-medium text-white">Showroom Hours</p>
+                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.timings.days}: {BUSINESS_INFO.timings.hours}</p>
+                  <p className="text-[11px] text-[#C9A24A]">Open All 7 Days</p>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#C5A059] shrink-0" />
-                <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:text-[#E0C17E] break-all">
-                  {BUSINESS_INFO.email}
-                </a>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium text-white">Business Hours:</p>
-                  <p>Monday – Sunday: 10:30 AM – 8:30 PM</p>
-                  <p className="text-[#C5A059] font-medium">Open All 7 Days</p>
+                  <p className="font-medium text-white">Helpline</p>
+                  <a href={`tel:+91${BUSINESS_INFO.phone}`} className="hover:text-[#E8D8B7]">
+                    +91 {BUSINESS_INFO.phoneDisplay}
+                  </a>
+                  <p className="text-[11px] text-[#FAF8F5]/60">+91 {BUSINESS_INFO.secondaryPhone}</p>
                 </div>
-              </div>
-
-              <div className="pt-1 text-[11px] text-[#FAF8F5]/60 font-mono">
-                GSTIN: <span className="text-[#E0C17E] font-semibold">{BUSINESS_INFO.gstin}</span>
               </div>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Legal Copyright Strip */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#FAF8F5]/70">
-          <div className="text-center md:text-left space-y-1">
-            <p className="font-medium text-[#FAF8F5]">
-              Copyright © Pavitrani Jewellers All rights reserved.
-            </p>
-            <p className="text-[11px] text-[#FAF8F5]/50">
-              A unit of MAYANK METAL WORKS  |  GSTIN: {BUSINESS_INFO.gstin}  |  Varanasi, Uttar Pradesh, India
-            </p>
+        {/* Bottom Legal Copyright & Certification Bar */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#FAF8F5]/70 font-sans">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-center md:text-left">
+            <span>Copyright © Pavitrani Jewellers All rights reserved.</span>
+            <span className="hidden sm:inline text-[#C9A24A]/40">•</span>
+            <span className="text-[#E8D8B7]">GSTIN: {BUSINESS_INFO.gstin}</span>
+            <span className="hidden sm:inline text-[#C9A24A]/40">•</span>
+            <span>A unit of MAYANK METAL WORKS</span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <button
-              onClick={() => handleNav('disclaimer')}
-              className="hover:text-[#E0C17E] transition-colors"
-            >
-              Disclaimer
-            </button>
-            <span className="text-white/20">•</span>
-            <button
+          <div className="flex items-center gap-4">
+            <button 
               onClick={() => handleNav('privacy')}
-              className="hover:text-[#E0C17E] transition-colors"
+              className="hover:text-[#E8D8B7] transition-colors"
             >
               Privacy Policy
             </button>
-            <span className="text-white/20">•</span>
+            <span className="text-[#C9A24A]/40">•</span>
+            <button 
+              onClick={() => handleNav('disclaimer')}
+              className="hover:text-[#E8D8B7] transition-colors"
+            >
+              Disclaimer
+            </button>
+            <span className="text-[#C9A24A]/40">•</span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A059] hover:text-[#180415] transition-all text-[11px] text-[#FAF8F5]"
-              title="Return to top of page"
+              className="flex items-center gap-1 text-[#E8D8B7] hover:text-white transition-colors"
+              aria-label="Back to top"
             >
-              <ArrowUp className="w-3.5 h-3.5" />
               <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
-
       </div>
     </footer>
   );

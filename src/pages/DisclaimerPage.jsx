@@ -4,13 +4,15 @@ import { BUSINESS_INFO } from '../data/business';
 
 export default function DisclaimerPage({ setActivePage }) {
   return (
-    <div className="space-y-12 py-8">
+    <div className="space-y-12">
       
-      {/* Header */}
-      <section className="bg-gradient-to-b from-[#2D0A27] via-[#22051E] to-[#FAF8F5] text-[#FAF8F5] pt-12 pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#C5A059]/20 text-center">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C5A059]/40 text-[#E0C17E] text-xs font-medium">
-            <FileText className="w-3.5 h-3.5" />
+      {/* Header (Royal Plum - Flush under header with zero gap) */}
+      <section className="bg-[#44003B] text-[#FAF6EF] pt-14 pb-24 px-4 sm:px-6 lg:px-8 border-b border-[#C9A24A]/30 text-center relative overflow-hidden">
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-[#C9A24A]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto space-y-4 relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#C9A24A]/40 text-[#E8D8B7] text-xs font-medium">
+            <FileText className="w-3.5 h-3.5 text-[#C9A24A]" />
             <span>Official Legal Notice</span>
           </div>
 
@@ -18,18 +20,18 @@ export default function DisclaimerPage({ setActivePage }) {
             Product & Pricing Disclaimer
           </h1>
 
-          <p className="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+          <p className="text-sm sm:text-base text-[#FAF6EF]/85 max-w-2xl mx-auto font-light leading-relaxed font-sans">
             Important information regarding product representations, daily precious metal market price variations, and showroom confirmations for Pavitrani Jewellers.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-luxury border border-[#C5A059]/30 space-y-8 text-left text-gray-700 leading-relaxed font-sans text-sm">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20 pb-12">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-luxury border border-[#C9A24A]/25 space-y-8 text-left text-[#30232E]/85 leading-relaxed font-sans text-sm">
           
-          <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 flex items-start gap-3 text-amber-900">
-            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="p-4 rounded-xl bg-[#FAF6EF] border border-[#C9A24A]/30 flex items-start gap-3 text-[#30232E]">
+            <AlertCircle className="w-5 h-5 text-[#C9A24A] shrink-0 mt-0.5" />
             <p className="text-xs leading-relaxed">
               <strong>Important Summary:</strong> All jewellery photographs, descriptions, and catalogues displayed on this website represent authentic pieces from Pavitrani Jewellers. However, due to daily metal market fluctuations and handcrafted artisanal variations, final product weights, dimensions, stone metrics, availability, and prices must always be confirmed directly with our showroom on B.L.W Road, Varanasi.
             </p>
@@ -37,11 +39,11 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 1 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">1.</span> Product Representations & Photography
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">1.</span> Product Representations & Photography
             </h2>
             <p>
-              All photographs featured across <strong>pavitranijewellers.com</strong> are authentic images of our actual inventory, showroom displays, and handcrafted creations. We strictly do not generate artificial product images or misrepresent our merchandise.
+              All photographs featured across <strong>pavitrani.com</strong> are authentic images of our actual inventory, showroom displays, and handcrafted creations. We strictly do not generate artificial product images or misrepresent our merchandise.
             </p>
             <p>
               However, because fine jewellery involves reflective precious metals (925 sterling silver, hallmarked gold) and multifaceted stones, photographic colors, lustres, and dimensions may vary slightly depending on monitor color calibration, ambient showroom illumination, and screen resolutions.
@@ -50,96 +52,86 @@ export default function DisclaimerPage({ setActivePage }) {
 
           {/* Section 2 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">2.</span> Daily Bullion Market Price Fluctuations
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">2.</span> Daily Precious Metal Price Fluctuation
             </h2>
             <p>
-              Gold and silver prices are subject to continuous fluctuation in accordance with national and international bullion markets, government duties, and association benchmark rates.
+              Precious metal market rates (Gold 24K, 22K, 18K and Fine Silver 999, Sterling Silver 925) change continuously throughout trading hours based on national bullion exchanges and international market indices.
             </p>
             <p>
-              Consequently, we do not advertise static or binding prices online. Any price quote provided via WhatsApp, telephone, or website enquiry is indicative and valid only for the date and time specified. Final billing rates are calculated upon formal purchase at our Varanasi showroom based on the prevailing market rate and official computerized precision weighing.
+              Prices shown, quoted via online channels, or discussed on social media represent indicative estimates at a particular point in time. The definitive transaction price is calculated in real time at the billing terminal of our Varanasi showroom based on the official prevailing bullion rate at the moment of billing, certified weight, making charges, and applicable statutory GST (3%).
             </p>
           </div>
 
           {/* Section 3 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">3.</span> Handcrafted Variations & Custom Sizing
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">3.</span> Handcrafted Weight & Metric Variances
             </h2>
             <p>
-              Many of our pieces — notably our signature pure silver Mayur (peacock) artefacts, filigree links, and poojan thali sets — are handcrafted by master silversmiths and artisans in Varanasi. As a result, subtle natural variations in gram weight, chiseling relief, and link tolerances are hallmarks of authentic artisanal individuality, not defects.
+              Each piece of jewellery and silver artefact at Pavitrani Jewellers is handcrafted by seasoned master artisans. Due to the nature of manual metal casting, filigree work, stone setting, and hand polishing:
             </p>
-            <p>
-              Custom wrist sizing, chain lengths, and stone selections will naturally impact the final metal weight and quotation.
-            </p>
+            <ul className="list-disc pl-5 space-y-1 text-xs">
+              <li>Final physical weights may vary slightly from catalogue references (typically ±2% to 5%).</li>
+              <li>Dimensions and stone carat weights are approximate and confirmed on calibrated digital scales during showroom inspection.</li>
+              <li>Custom orders and adjustments are subject to individual craftsman specifications agreed upon during order placement.</li>
+            </ul>
           </div>
 
           {/* Section 4 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">4.</span> Availability & Showroom Inventory
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">4.</span> In-Stock Availability & Reservations
             </h2>
             <p>
-              While we endeavor to keep our catalogue representative of active stock, items are subject to prior sale in our showroom. An item displayed online does not constitute an irrevocable reservation until confirmed by our sales advisors.
+              Because our showroom maintains an active retail customer base on B.L.W Road, stock availability changes constantly. While we endeavor to keep the website catalogue synchronized with our vault inventory, pieces can be sold before online status updates.
             </p>
             <p>
-              If a specific design is temporarily out of stock, we can often craft or re-order it upon request.
+              To confirm that an item is currently available in the showroom before travelling, please connect with us directly via WhatsApp (+91 9335093572) or call our helpdesk (+91 9335093572).
             </p>
           </div>
 
           {/* Section 5 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">5.</span> Intellectual Property & Brand Assets
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">5.</span> Hallmarking & Quality Certification
             </h2>
             <p>
-              The <strong>Pavitrani Jewellers</strong> brand name, official lotus emblem logo, slogan <em>"Jewels as Pure as You"</em>, photographs, and website content are the exclusive intellectual property of <strong>Pavitrani Jewellers (A unit of Mayank Metal Works)</strong>. Unauthorized reproduction, scraping, commercial redistribution, or copying is strictly prohibited under Indian intellectual property laws.
+              Pavitrani Jewellers adheres unconditionally to Bureau of Indian Standards (BIS) hallmarking guidelines for gold jewellery and purity certification for 925 sterling silver ornaments. Every patron receives an authentic computerized GST tax invoice documenting metal purity, gross weight, net weight, stone details, and hallmark identification.
             </p>
           </div>
 
           {/* Section 6 */}
           <div className="space-y-3">
-            <h2 className="font-serif text-2xl font-bold text-[#2D0A27] flex items-center gap-2">
-              <span className="text-[#C5A059]">6.</span> Showroom Confirmation & Inquiries
+            <h2 className="font-serif text-2xl font-bold text-[#44003B] flex items-center gap-2">
+              <span className="text-[#C9A24A]">6.</span> Contact for Pricing & Order Clarifications
             </h2>
             <p>
-              For real-time stock verification, live weight certificates, and daily rate quotations, please contact our showroom advisors directly:
+              If you have any questions or require an exact quote based on today's live metal rates, our team is available to assist:
             </p>
-            <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#C5A059]/30 text-xs space-y-1">
-              <p><strong>Pavitrani Jewellers</strong> (A unit of MAYANK METAL WORKS)</p>
-              <p>Address: 81/1 Shivdaspur B.L.W Road Near Kabir Ashram, Varanasi, U.P. 221004</p>
-              <p>Phone: +91 {BUSINESS_INFO.phone} / +91 {BUSINESS_INFO.phoneSecondary}</p>
-              <p>WhatsApp: +91 {BUSINESS_INFO.whatsapp}</p>
-              <p>Email: {BUSINESS_INFO.email}</p>
-              <p>GSTIN: {BUSINESS_INFO.gstin}</p>
+            <div className="p-4 rounded-xl bg-[#FAF6EF] border border-[#C9A24A]/25 space-y-2 text-xs">
+              <p><strong>Showroom Address:</strong> 81/1 Shivdaspur B.L.W Road Near Kabir Ashram, Varanasi, U.P. 221004</p>
+              <p><strong>Telephone:</strong> +91 {BUSINESS_INFO.phoneDisplay} / +91 {BUSINESS_INFO.secondaryPhone}</p>
+              <p><strong>Email:</strong> {BUSINESS_INFO.email}</p>
+              <p><strong>GSTIN:</strong> {BUSINESS_INFO.gstin}</p>
             </div>
           </div>
 
           <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
-            <span className="text-xs text-gray-500">Last updated: November 2026</span>
-            
-            <div className="flex items-center gap-3">
-              <a
-                href={BUSINESS_INFO.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-medium flex items-center gap-1.5 shadow"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Verify a Piece on WhatsApp</span>
-              </a>
+            <p className="text-xs text-gray-500">
+              Last updated: November 2026 • Pavitrani Jewellers (A unit of Mayank Metal Works)
+            </p>
 
-              <button
-                onClick={() => {
-                  setActivePage('contact');
-                  window.location.hash = 'contact';
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="px-4 py-2 rounded-xl bg-[#2D0A27] text-[#E0C17E] text-xs font-semibold hover:bg-[#3E0E35]"
-              >
-                Contact Showroom
-              </button>
-            </div>
+            <button
+              onClick={() => {
+                setActivePage('collections');
+                window.location.hash = 'collections';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="px-4 py-2 rounded-xl bg-[#44003B] text-[#FAF6EF] text-xs font-semibold hover:bg-[#30232E] transition-colors"
+            >
+              Browse Collections
+            </button>
           </div>
 
         </div>

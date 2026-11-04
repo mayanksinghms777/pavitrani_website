@@ -2,25 +2,24 @@
 
 @layer base {
   :root {
-    --brand-plum: #2D0A27;
-    --brand-plum-deep: #1A0417;
-    --brand-plum-light: #49103F;
-    --gold: #C5A059;
-    --gold-light: #E0C17E;
-    --gold-dark: #9A7B39;
-    --ivory: #FAF8F5;
-    --ivory-warm: #F3EFE9;
-    --charcoal: #1C1917;
+    --royal-plum: #44003B;
+    --antique-gold: #C9A24A;
+    --warm-ivory: #FAF6EF;
+    --champagne: #E8D8B7;
+    --charcoal-plum: #30232E;
+    --white: #FFFFFF;
   }
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #FAF8F5;
-    color: #1F2937;
+    background-color: #FAF6EF;
+    color: #30232E;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
-  h1, h2, h3, .font-serif {
+  h1, h2, h3, h4, .font-serif {
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
@@ -29,19 +28,40 @@
   }
 }
 
+/* Luxury Brand Palette Utilities */
+.bg-royal-plum { background-color: #44003B; }
+.text-royal-plum { color: #44003B; }
+.border-royal-plum { border-color: #44003B; }
+
+.bg-antique-gold { background-color: #C9A24A; }
+.text-antique-gold { color: #C9A24A; }
+.border-antique-gold { border-color: #C9A24A; }
+
+.bg-warm-ivory { background-color: #FAF6EF; }
+.text-warm-ivory { color: #FAF6EF; }
+.border-warm-ivory { border-color: #FAF6EF; }
+
+.bg-champagne { background-color: #E8D8B7; }
+.text-champagne { color: #E8D8B7; }
+.border-champagne { border-color: #E8D8B7; }
+
+.bg-charcoal-plum { background-color: #30232E; }
+.text-charcoal-plum { color: #30232E; }
+.border-charcoal-plum { border-color: #30232E; }
+
 /* Custom Luxury Gold Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #FAF6EF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C5A059;
+  background: #C9A24A;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9A7B39;
+  background: #A68233;
 }
 
 /* Subtle Shimmer & Glow Effects */
@@ -58,30 +78,30 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 74, 0.2), transparent);
   transform: translateX(-100%);
   animation: shimmer 3s infinite;
 }
 
 /* Gold Gradient utilities */
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #DFBE7B 0%, #C5A059 50%, #9E7D36 100%);
+  background: linear-gradient(135deg, #E8D8B7 0%, #C9A24A 50%, #A68233 100%);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #E0C17E 0%, #C5A059 50%, #B89243 100%);
+  background: linear-gradient(135deg, #DFBE7B 0%, #C9A24A 50%, #B89243 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .border-gold-subtle {
-  border-color: rgba(197, 160, 89, 0.25);
+  border-color: rgba(201, 162, 74, 0.25);
 }
 
 .shadow-luxury {
-  box-shadow: 0 10px 35px -5px rgba(45, 10, 39, 0.08), 0 4px 12px -2px rgba(197, 160, 89, 0.08);
+  box-shadow: 0 10px 35px -5px rgba(68, 0, 59, 0.07), 0 4px 12px -2px rgba(201, 162, 74, 0.08);
 }
 
 .shadow-luxury-hover {
-  box-shadow: 0 20px 45px -10px rgba(45, 10, 39, 0.16), 0 8px 20px -3px rgba(197, 160, 89, 0.18);
+  box-shadow: 0 20px 45px -10px rgba(68, 0, 59, 0.14), 0 8px 20px -3px rgba(201, 162, 74, 0.16);
 }
