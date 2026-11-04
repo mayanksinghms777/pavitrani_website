@@ -268,8 +268,8 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 <MapPin className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-medium text-white">{BUSINESS_INFO.name}</p>
-                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address.street}</p>
-                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} {BUSINESS_INFO.address.pincode}</p>
+                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address?.line1 || BUSINESS_INFO.address?.street || "81/1 Shivdaspur, B.L.W Road"}</p>
+                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.address?.city}, {BUSINESS_INFO.address?.state} {BUSINESS_INFO.address?.pincode}</p>
                   <a 
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
@@ -285,7 +285,9 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 <Clock className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-medium text-white">Showroom Hours</p>
-                  <p className="text-[#FAF8F5]/80">{BUSINESS_INFO.timings.days}: {BUSINESS_INFO.timings.hours}</p>
+                  <p className="text-[#FAF8F5]/80">
+                    {BUSINESS_INFO.timings?.days || BUSINESS_INFO.businessHours?.[0]?.days || "Monday - Sunday"}: {BUSINESS_INFO.timings?.hours || BUSINESS_INFO.businessHours?.[0]?.time || "10:30 AM - 8:30 PM"}
+                  </p>
                   <p className="text-[11px] text-[#C9A24A]">Open All 7 Days</p>
                 </div>
               </div>
@@ -295,9 +297,9 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
                 <div>
                   <p className="font-medium text-white">Helpline</p>
                   <a href={`tel:+91${BUSINESS_INFO.phone}`} className="hover:text-[#E8D8B7]">
-                    +91 {BUSINESS_INFO.phoneDisplay}
+                    {BUSINESS_INFO.phoneDisplay}
                   </a>
-                  <p className="text-[11px] text-[#FAF8F5]/60">+91 {BUSINESS_INFO.secondaryPhone}</p>
+                  <p className="text-[11px] text-[#FAF8F5]/60">{BUSINESS_INFO.phoneSecondaryDisplay || BUSINESS_INFO.secondaryPhoneDisplay}</p>
                 </div>
               </div>
             </div>

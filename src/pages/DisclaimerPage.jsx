@@ -111,7 +111,7 @@ export default function DisclaimerPage({ setActivePage }) {
             </p>
             <div className="p-4 rounded-xl bg-[#FAF6EF] border border-[#C9A24A]/25 space-y-2 text-xs">
               <p><strong>Showroom Address:</strong> 81/1 Shivdaspur B.L.W Road Near Kabir Ashram, Varanasi, U.P. 221004</p>
-              <p><strong>Telephone:</strong> +91 {BUSINESS_INFO.phoneDisplay} / +91 {BUSINESS_INFO.secondaryPhone}</p>
+              <p><strong>Telephone:</strong> {BUSINESS_INFO.phoneDisplay} / {BUSINESS_INFO.phoneSecondaryDisplay || BUSINESS_INFO.secondaryPhoneDisplay}</p>
               <p><strong>Email:</strong> {BUSINESS_INFO.email}</p>
               <p><strong>GSTIN:</strong> {BUSINESS_INFO.gstin}</p>
             </div>

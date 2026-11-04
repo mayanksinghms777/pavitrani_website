@@ -6,6 +6,7 @@ export const BUSINESS_INFO = {
   gstin: "09AUQPS8232E2Z3",
   address: {
     line1: "81/1 Shivdaspur, B.L.W Road",
+    street: "81/1 Shivdaspur, B.L.W Road",
     landmark: "Near Kabir Ashram",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -16,6 +17,8 @@ export const BUSINESS_INFO = {
   phoneDisplay: "+91 93350 93572",
   phoneSecondary: "8299045172",
   phoneSecondaryDisplay: "+91 82990 45172",
+  secondaryPhone: "8299045172",
+  secondaryPhoneDisplay: "+91 82990 45172",
   whatsapp: "9335093572",
   whatsappLink: "https://wa.me/919335093572",
   email: "pavitranijewellers@gmail.com",
@@ -25,6 +28,11 @@ export const BUSINESS_INFO = {
   businessHours: [
     { days: "Monday - Sunday", time: "10:30 AM - 8:30 PM", note: "Open All 7 Days" }
   ],
+  timings: {
+    days: "Monday - Sunday",
+    hours: "10:30 AM - 8:30 PM",
+    note: "Open All 7 Days"
+  },
   pillars: [
     {
       title: "Purity You Can Trust",
