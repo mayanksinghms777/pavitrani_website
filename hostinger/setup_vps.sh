@@ -17,15 +17,37 @@ apt update -y
 echo "--> Installing Nginx, Certbot, and rsync..."
 apt install -y nginx certbot python3-certbot-nginx rsync ufw curl
 
-# 3. Create Web Directory
+# 3. Create Web Directory and Build
 echo "--> Creating web root at /var/www/pavitrani/dist..."
 mkdir -p /var/www/pavitrani/dist
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+
+if [ -f "$REPO_ROOT/package.json" ]; then
+    echo "--> Detected repository source at $REPO_ROOT. Checking Node.js & building bundle..."
+    if ! command -v node >/dev/null 2>&1; then
+        echo "--> Installing Node.js 20 LTS..."
+        curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+        apt install -y nodejs
+    fi
+    echo "--> Building production assets..."
+    cd "$REPO_ROOT"
+    npm install
+    npm run build
+    cp -r "$REPO_ROOT/dist/"* /var/www/pavitrani/dist/
+    cd "$SCRIPT_DIR"
+fi
+
 chown -R www-data:www-data /var/www/pavitrani
 chmod -R 755 /var/www/pavitrani
 
 # 4. Copy Nginx Site Configuration
 echo "--> Applying Nginx site configuration..."
-if [ -f "pavitrani.com.conf" ]; then
+CONF_PATH="$SCRIPT_DIR/pavitrani.com.conf"
+if [ -f "$CONF_PATH" ]; then
+    cp "$CONF_PATH" /etc/nginx/sites-available/pavitrani.com
+elif [ -f "pavitrani.com.conf" ]; then
     cp pavitrani.com.conf /etc/nginx/sites-available/pavitrani.com
 else
     cat << 'EOF' > /etc/nginx/sites-available/pavitrani.com
