@@ -79,7 +79,7 @@ export default function Navbar({ activePage, setActivePage }) {
           {/* Brand Logo & Name */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2 sm:gap-3.5 text-left group focus:outline-none min-w-0 mr-0 lg:mr-10 xl:mr-14"
+            className="flex items-center gap-2.5 sm:gap-3.5 text-left group focus:outline-none flex-shrink-0 mr-4 lg:mr-8 xl:mr-12"
             aria-label="Pavitrani Jewellers Home"
           >
             {/* Official Supplied Lotus Logo in authentic Royal Purple without any background or color filter */}
@@ -87,7 +87,7 @@ export default function Navbar({ activePage, setActivePage }) {
               <img 
                 src="/logo.png" 
                 alt="Pavitrani Jewellers Official Lotus Emblem" 
-                className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-all"
+                className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-all"
                 loading="eager"
               />
             </div>
@@ -111,6 +111,9 @@ export default function Navbar({ activePage, setActivePage }) {
               </span>
             </div>
           </button>
+
+          {/* Elegant Gold Hairline Divider between Brand and Nav Links */}
+          <div className="hidden lg:block h-6 w-[1px] bg-[#C9A24A]/30 shrink-0 mr-4 xl:mr-6" aria-hidden="true" />
 
           {/* Desktop Navigation Links (Center - Guaranteed strictly on ONE horizontal line with comfortable spacing) */}
           <div className="hidden lg:flex items-center space-x-1.5 xl:space-x-3 shrink-0">
@@ -136,16 +139,16 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
 
           {/* Action Buttons on Right (Desktop only) */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0 ml-auto pl-4">
             <a
               href={BUSINESS_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-1.5 px-3 xl:px-3.5 py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 p-2 xl:px-3.5 xl:py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs whitespace-nowrap"
               title="Chat with jewellery advisor on WhatsApp"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white shrink-0" />
-              <span>Enquire Now</span>
+              <MessageCircle className="w-4 h-4 xl:w-3.5 xl:h-3.5 text-emerald-600 group-hover:text-white shrink-0" />
+              <span className="hidden xl:inline">Enquire Now</span>
             </a>
 
             <button
