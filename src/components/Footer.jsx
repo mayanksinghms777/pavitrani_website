@@ -39,7 +39,7 @@ export default function Footer({ setActivePage, setCollectionFilter }) {
             <div className="flex items-center gap-3 min-w-0">
               <div className="relative flex-shrink-0">
                 <img 
-                  src="/logo-white.png" 
+                  src="/pavitrani-official-white.png?v=20261105" 
                   alt="Pavitrani Jewellers Official Lotus Emblem" 
                   className="h-10 xl:h-11 w-auto object-contain opacity-95"
                 />

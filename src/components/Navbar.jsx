@@ -85,7 +85,7 @@ export default function Navbar({ activePage, setActivePage }) {
             {/* Official Supplied Lotus Logo in authentic Royal Purple without any background or color filter */}
             <div className="relative flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
               <img 
-                src="/logo.png" 
+                src="/pavitrani-official-logo.png?v=20261105" 
                 alt="Pavitrani Jewellers Official Lotus Emblem" 
                 className="h-9 sm:h-10 md:h-11 w-auto object-contain transition-all"
                 loading="eager"
