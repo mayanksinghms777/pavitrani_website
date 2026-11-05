@@ -74,12 +74,12 @@ export default function Navbar({ activePage, setActivePage }) {
           ? 'shadow-sm py-2.5 border-b border-[#C9A24A]/30' 
           : 'py-3.5 border-b border-[#C9A24A]/20'
       }`}>
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 lg:gap-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between">
           
           {/* Brand Logo & Name */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2.5 sm:gap-3.5 text-left group focus:outline-none flex-shrink-0 mr-4 lg:mr-8 xl:mr-12"
+            className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none flex-shrink-0 mr-3 lg:mr-5 xl:mr-7"
             aria-label="Pavitrani Jewellers Home"
           >
             {/* Official Supplied Lotus Logo in authentic Royal Purple without any background or color filter */}
@@ -87,7 +87,7 @@ export default function Navbar({ activePage, setActivePage }) {
               <img 
                 src="/logo.png" 
                 alt="Pavitrani Jewellers Official Lotus Emblem" 
-                className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-all"
+                className="h-9 sm:h-10 md:h-11 w-auto object-contain transition-all"
                 loading="eager"
               />
             </div>
@@ -95,35 +95,35 @@ export default function Navbar({ activePage, setActivePage }) {
             {/* Brand Lockup: PAVITRANI JEWELLERS on ONE horizontal line on desktop */}
             <div className="flex flex-col min-w-0">
               <div className="flex items-baseline gap-1 sm:gap-2 leading-none">
-                <span className="font-serif text-[15px] sm:text-lg md:text-xl lg:text-[18px] xl:text-[21px] font-bold tracking-[0.04em] sm:tracking-[0.08em] text-[#47153F] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
+                <span className="font-serif text-[15px] sm:text-base md:text-lg lg:text-[17px] xl:text-[20px] font-bold tracking-[0.04em] sm:tracking-[0.06em] text-[#47153F] group-hover:text-[#C9A24A] transition-colors whitespace-nowrap">
                   PAVITRANI JEWELLERS
                 </span>
               </div>
               
               {/* Tagline underneath */}
-              <span className="font-serif italic text-[9px] sm:text-[11px] md:text-xs text-[#C9A24A] tracking-[0.12em] sm:tracking-[0.18em] uppercase font-medium leading-tight mt-0.5 sm:mt-1 whitespace-nowrap">
+              <span className="font-serif italic text-[9px] sm:text-[10px] md:text-xs text-[#C9A24A] tracking-[0.12em] sm:tracking-[0.16em] uppercase font-medium leading-tight mt-0.5 whitespace-nowrap">
                 Jewels as Pure as You
               </span>
               
               {/* Secondary text */}
-              <span className="text-[8px] sm:text-[9px] text-[#30232E]/70 tracking-wider uppercase font-sans hidden md:block leading-tight mt-0.5 font-medium whitespace-nowrap">
+              <span className="text-[8px] sm:text-[9px] text-[#30232E]/70 tracking-wider uppercase font-sans hidden sm:block leading-tight mt-0.5 font-medium whitespace-nowrap">
                 A unit of Mayank Metal Works
               </span>
             </div>
           </button>
 
           {/* Elegant Gold Hairline Divider between Brand and Nav Links */}
-          <div className="hidden lg:block h-6 w-[1px] bg-[#C9A24A]/30 shrink-0 mr-4 xl:mr-6" aria-hidden="true" />
+          <div className="hidden lg:block h-5 w-[1px] bg-[#C9A24A]/30 shrink-0 mr-3 lg:mr-4 xl:mr-6" aria-hidden="true" />
 
           {/* Desktop Navigation Links (Center - Guaranteed strictly on ONE horizontal line with comfortable spacing) */}
-          <div className="hidden lg:flex items-center space-x-1.5 xl:space-x-3 shrink-0">
+          <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 shrink-0">
             {navLinks.map((link) => {
               const isActive = activePage === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`whitespace-nowrap px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm font-medium tracking-wide transition-all rounded-md relative ${
+                  className={`whitespace-nowrap px-2 xl:px-3 py-1.5 text-xs xl:text-sm font-medium tracking-wide transition-all rounded-md relative ${
                     isActive
                       ? 'text-[#47153F] font-bold'
                       : 'text-[#30232E]/80 hover:text-[#47153F] hover:bg-[#E8D8B7]/30'
@@ -139,21 +139,22 @@ export default function Navbar({ activePage, setActivePage }) {
           </div>
 
           {/* Action Buttons on Right (Desktop only) */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0 ml-auto pl-4">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0 ml-auto pl-2">
             <a
               href={BUSINESS_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 p-2 xl:px-3.5 xl:py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 p-2 2xl:px-3.5 2xl:py-2 rounded-full border border-emerald-600/30 bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white transition-all text-xs font-medium tracking-wide shadow-xs whitespace-nowrap"
               title="Chat with jewellery advisor on WhatsApp"
+              aria-label="Chat on WhatsApp"
             >
-              <MessageCircle className="w-4 h-4 xl:w-3.5 xl:h-3.5 text-emerald-600 group-hover:text-white shrink-0" />
-              <span className="hidden xl:inline">Enquire Now</span>
+              <MessageCircle className="w-4 h-4 text-emerald-600 group-hover:text-white shrink-0" />
+              <span className="hidden 2xl:inline">Enquire Now</span>
             </a>
 
             <button
               onClick={() => handleNavClick('contact')}
-              className="inline-flex items-center gap-1.5 px-3.5 xl:px-4 py-2 rounded-full bg-[#47153F] text-white hover:bg-[#340E2E] border border-[#C9A24A]/40 transition-all text-xs font-semibold tracking-wider uppercase shadow-sm hover:shadow whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 xl:px-4 py-1.5 xl:py-2 rounded-full bg-[#47153F] text-white hover:bg-[#340E2E] border border-[#C9A24A]/40 transition-all text-xs font-semibold tracking-wider uppercase shadow-sm hover:shadow whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#C9A24A] shrink-0" />
               <span>Visit Showroom</span>
